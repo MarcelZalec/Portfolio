@@ -1,0 +1,127 @@
+@import '../../app.component.scss';
+
+section {
+    font-family: 'Karla';
+    background: linear-gradient(55.22deg, rgba(28 ,28, 28, 1) 36.26%, rgba(8, 70, 59, 1));
+    width: 100%;
+    height: calc(100vh - 96px);
+    @include dFlex();
+    overflow-x: hidden;
+
+    >div {
+        background: unset;
+        >span {
+            @include dFlex();
+            background-color: unset;
+            font-size: 40px;
+        }
+    }
+
+    .headline {
+        @include dFlex();
+        font-size: 128px;
+        background: none;
+    }
+
+    p {
+        font-size: 18px;
+        background-color: unset;
+        font-family: 'Karla';
+    }
+}
+
+.info-box {
+    z-index: 100;
+    background-color: rgba(255,255,255,0.12);
+    position: absolute;
+    @include dFlex(space-around);
+    width: 100vw;
+    height: 62px;
+    top: 800px;
+    left: -40px;
+    margin: 12px 32px 12px 32px;
+    gap: 56px;
+    transform: rotate(-3deg);
+    opacity: 0.5;
+    >div {
+        width: 100vw;
+        background-color: unset;
+        @include dFlex(space-around);
+        animation: slider-animation 15s ease-in-out;
+        animation-iteration-count: infinite;
+        p {
+            // animation: slider-animation 10s ease-in-out;
+            color: $mintGreen;
+            font-size: 32px;
+            line-height: 38.4px;
+        }
+    }
+}
+
+.arrow-down {
+    bottom: 125px;
+    left: 100px;
+    position: absolute;
+    @include dFlex(space-around);
+    transform: rotate(-90deg);
+    background-color: unset;
+    gap: 10px;
+    svg {
+        background-color: unset;
+        transform: rotate(90deg);
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .line {
+        width: 240px;
+    }
+}
+
+.contact {
+    background-color: unset;
+    bottom: 189px;
+    right: 100px;
+    position: absolute;
+    @include dFlex(space-around, $g: 10px);
+    transform: rotate(-90deg);
+    .line {
+        width: 200px;
+        border-color: $normalWhite;
+    }
+    svg {
+        background-color: unset;
+        transform: rotate(90deg);
+        padding-left: 5px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    a{
+        background-color: unset;
+        text-decoration: none;
+        &:hover {
+            color: $mintGreen;
+        }
+    }
+}
+
+.rotate-90 {
+    transform: rotate(90deg);
+}
+
+.links{
+    padding: 0px 12px;
+}
+
+@keyframes slider-animation{
+    from {
+        transform: translateX(100vw);
+    } to {
+        transform: translateX(calc(-100vw));
+    }
+}
+
+.sidePoint {
+    padding-left: 5px;
+}

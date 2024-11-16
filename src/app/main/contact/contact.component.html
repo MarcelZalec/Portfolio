@@ -1,0 +1,42 @@
+<section>
+    <div>
+        <h2>Contact me</h2>
+        <h1>Let's work <br> together</h1>
+        <div>
+            <h3>Got a problem to solve?</h3>
+            <div>
+                <span>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</span>
+                <span>Need a Frontend developer? <span class="mint-green">Let’s talk!</span></span>
+            </div>
+        </div>
+    </div>
+    <div>
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+            <div>
+                <div>
+                    <label>What's your name?</label>
+                    <input [(ngModel)]="contactData.name" name="name" type="text" placeholder="Your name goes here" required>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label>What's your email?</label>
+                    <input [(ngModel)]="contactData.email" name="email" type="text" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label>How can I help you?</label>
+                    <input [(ngModel)]="contactData.message" name="message" type="text" placeholder="Hello Marcel, I am interested in..." required>
+                </div>
+            </div>
+
+            <div class="button-div">
+                <div>
+                    <span>I've read the <span class="mint-green">privacy policy</span> and agree to the processing of my data as outlined.</span>
+                </div>
+                <button type="submit" value="Say Hello :)"><p>Say Hello ;)</p></button>
+            </div>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,59 @@
+@import '../../app.component.scss';
+
+*{
+    color: $mintGreen;
+    font-family: 'Karla';
+    p,span {
+        font-size: 18px !important;
+    }
+}
+
+section {
+
+    @include dFlex(space-around);
+    flex-direction: row;
+    h1 {
+        width: 100%;
+        height: auto;
+        font-family: 'Fira Dode';
+        font-size: 64px !important;
+        font-weight: 700;
+        // line-height: 64px;
+        letter-spacing: -0.03em;
+        text-align: left;
+    }
+    img {
+        width: 568px;
+        height: 568px;
+        border-radius: 30px;
+    }
+}
+
+.text {
+    @include dFlex();
+    text-align: justify;
+    flex-wrap: wrap;
+    gap: 32px;
+    >div {
+        @include dFlex(center, start);
+        img {
+            width: 32px;
+            height: 32px;
+        }
+        span {
+            padding: 0px 5px;
+            color: rgba($color: #ffffff, $alpha: 0.8);
+            flex: 1;
+        }
+        
+        &:hover {
+            span {
+                color: rgba($color: #ffffff, $alpha: 1.0);
+            }
+        }
+    }
+    >span {
+        padding: 0px 5px;
+        color: $normalWhite
+    }
+}

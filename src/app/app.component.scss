@@ -1,0 +1,120 @@
+@import '../styles.scss';
+
+// $backgroundStandart: rgb(23, 23, 23);
+$normalWhite: rgb(255, 255, 255, 1) !important;
+
+
+@keyframes hover-Button-animation{
+    0% {
+        transform: translateX(150px);
+    } 100% {
+        transform: translateX(-150px);
+    }
+}
+
+.buttons{
+    background: unset;
+    @include dFlex();
+    gap: 70px;
+    
+}
+
+button {
+    border-color: $normalWhite;
+    width: fill(172px);
+    gap: 10px;
+    padding: 0px 24px;
+    border-radius: 25px;
+    height: 48px;
+    background: unset;
+    overflow-x: hidden;
+
+    &:hover {
+        cursor: pointer;
+        border-color: $mintGreen !important;
+        p {
+            color: $mintGreen;
+            animation: hover-Button-animation 2.35s ease-in-out;
+            animation-iteration-count: infinite;
+            transform: translateX(-150px);
+        }
+    }
+}
+
+.line {
+    height: 0px;
+    border: 1px solid $mintGreen !important;
+}
+
+.circleGreen {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    border: 1px solid $mintGreen;
+    background-color: $mintGreen;
+}
+
+.border-box {
+    @include dFlex(start);
+    flex-direction: column;
+    height: 640px;
+    width: 40vw;
+    gap: 20px;
+    .border-frame {
+        background: rgba(61, 207, 182, 0.1);
+        @include dFlex(space-around);
+        flex-direction: column;
+        border: 1px solid $mintGreen !important;
+        border-radius: 30px;
+        padding: 32px;
+        gap: 40px;
+    }
+    h2 {
+        width: 100%;
+        text-align: start;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 28.06px;
+    }
+}
+
+.flex-start {
+    position: relative;
+    top: 0px;
+    left: 25px;
+    // height: 100vh;
+    // @include dFlex(center ,start)
+}
+
+.flex-end {
+    height: 100vh;
+    @include dFlex(center ,end)
+}
+
+.sidePoint {
+    position: relative;
+    @include dFlex();
+    flex-direction: column;
+}
+
+.dialog-bg {
+    @include dFlex();
+    position: absolute;
+    left: 00px;
+    right: 0;
+    bottom: 0;
+    top: 2130px;
+    height: 200%;
+    width: 100%;
+    //background-color: rgba($color: #171717, $alpha: 0.2);
+    background-color: rgba($color: #ffffff, $alpha: 0.2);
+}
+
+.dialog {
+    @include dFlex();
+    background-color: rgba($color: #171717, $alpha: 0.2);
+    width: 50%;
+    height: 50vh;
+    border: 2px solid red;
+    border-radius: 30px;
+}

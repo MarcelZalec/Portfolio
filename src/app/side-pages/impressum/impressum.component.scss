@@ -1,0 +1,21 @@
+@import '../../app.component.scss';
+
+*{
+    // color: rgba($color: $normalWhite, $alpha: 0.8);
+    font-family: 'Karla';
+}
+
+section {
+    height: calc(100vh - 196px);
+    >div>div {
+        padding: 20px 0px;
+    }
+    >div,>p {
+        margin: 0px 50px;
+    }
+
+}
+
+h1,h2 {
+    padding: 25px 50px;
+}

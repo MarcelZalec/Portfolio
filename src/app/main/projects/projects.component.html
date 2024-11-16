@@ -1,0 +1,34 @@
+<section>
+    <h2>Portfolio</h2>
+    <h1>Featured Projects</h1>
+    <span>Explore a selection of my work here - Interact with projects to see my skills in action.</span>
+    <div>
+        <div class="projects">
+            <div class="project" (mouseover)="mouseover('join');" (mouseout)="mouseout('join');">
+                <p>Join</p>
+                <span>JavaScript HTML CSS Firebase</span>
+            </div>
+            <div class="project" (mouseover)="mouseover('poloLoco');" (mouseout)="mouseout('poloLoco');">
+                <p>El Polo Loco</p>
+                <span>JavaScript HTML CSS</span>
+            </div>
+            <div class="project" (click)="openDialog()" (mouseover)="mouseover('bubble');" (mouseout)="mouseout('bubble');">
+                <p>DA Bubble</p>
+                <span>Angular Firebase TypeScript</span>
+            </div>
+        </div>
+        <div class="imgCont">
+            <!-- <img [ngStyle]="{'opacity': this.{{ projectpic }} ? 1 : 0}" class="projectpic" src="assets/img/poloLoco.png" alt="img">
+            <div [ngStyle]="{'opacity': this.{{ projectpic }} ? 1 : 0}">!!</div> -->
+        </div>
+    </div>
+
+    <div class="dialog-bg d-none">
+        <div class="dialog">
+
+        </div>
+    </div>
+    
+</section>
+
+<!-- <img [ngStyle]="{'opacity': this.{{ projectpic }} ? 1 : 0}" src="assets/img/{{ projectpic }}.png" alt="img"> -->

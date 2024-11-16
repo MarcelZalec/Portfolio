@@ -1,0 +1,99 @@
+@import '../../app.component.scss';
+
+*{
+    font-family: 'Karla'
+}
+
+section {
+    @include dFlex();
+    flex-direction: column;
+    padding-top: 100px;
+    height: auto;
+    h1,h2 {
+        color: $mintGreen;
+    }
+}
+
+.say-about {
+    width: 100%;
+    >div{
+        @include dFlex();
+        flex-direction: column;
+        width: 100%;
+        >div {
+            @include dFlex();
+            border: unset;
+            background: unset;
+            >img {
+                padding: 0px 10px;
+            }
+        }
+    }
+    h2 {
+        text-align: center;
+        font-size: 32px;
+        line-height: 41.98px;
+    }
+}
+
+.line {
+    height: 0px
+}
+
+.border-box {
+    @include dFlex();
+    background: linear-gradient(90deg, #1C1C1C 0%, rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 0) 90%, #1C1C1C 100%);
+    width: 630px;
+    height: 280px;
+    .border-frame {
+        @include dFlex(space-between, start);
+        width: 86%;
+        height: 200px;
+        padding: 48px 40px;
+        font-size: 18px;
+        >div {
+            @include dFlex();
+            width: 100%;
+            >div {
+                flex: 1;
+            }
+            >span {
+                padding-left: 12px;
+            }
+        }
+    }
+}
+
+.qoutes {
+    position: relative;
+    top: 50px;
+    left: -316px;
+}
+
+.selector {
+    padding-top: 20px;
+    img {
+        padding: 0px 10px;
+    }
+}
+
+.arrows {
+    cursor: pointer;
+}
+
+.left {
+    &:hover {
+        transform: translateX(-5px);
+    }
+}
+
+.right {
+    &:hover {
+        transform: translateX(+5px);
+    }
+}
+
+.messages {
+    @include dFlex($g: 70px !important);
+    overflow-x: hidden;
+}
