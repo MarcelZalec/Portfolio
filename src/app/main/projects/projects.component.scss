@@ -26,8 +26,8 @@ section {
         width: 880px;
         padding: 50px 0px;
     }
-    >div {
-        @include dFlex($g: 50px);
+    .description {
+        padding-left: 20px;
     }
 }
 
@@ -66,21 +66,36 @@ section {
         }
 }
 
-// .dialog-bg {
-//     position: absolute;
-//     left: 00px;
-//     right: 0;
-//     height: 100vh;
-//     width: 100%;
-//     //background-color: rgba($color: #171717, $alpha: 0.2);
-//     background-color: rgba($color: #ffffff, $alpha: 0.2);
-// }
-
-.dialog {
+.app-dialog {
     @include dFlex();
-    background-color: rgba($color: #171717, $alpha: 0.2);
-    width: 50%;
-    height: 50vh;
-    border: 2px solid red;
-    border-radius: 30px;
+}
+
+@media (max-width: 800px) {
+    section {
+        // padding-left: 20px;
+        h2 {
+            font-size: 18px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        >span {
+            width: 80vw;
+        }
+    }
+
+    .projects {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 150px 0px;
+    }
+    .project{
+        >.skills {
+            display: none;
+        }
+    }
 }

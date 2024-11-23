@@ -1,0 +1,121 @@
+{
+    "header": {
+        "about": "Über mich",
+        "skills": "Fähigkeiten",
+        "projects": "Projekte"
+    },
+    "hero": {
+        "headline": "Frontend Entwickler",
+        "work": "Projekte ansehen",
+        "contact": "Kontakt aufnehmen",
+        "slider": [
+            { "slide": "Verfügbar für Projekte" },
+            { "slide": "Aus Österreich" },
+            { "slide": "Frontend Entwickler" },
+            { "slide": "Verfügbar für fern Arbeit" },
+            { "slide": "Verfügbar für Projekte" },
+            { "slide": "Aus Österreich" },
+            { "slide": "Frontend Entwickler" },
+            { "slide": "Verfügbar für fern Arbeit" }
+        ]
+    },
+    "about": {
+        "eyebrow": "Wer ich bin",
+        "headline": "Über mich",
+        "description": "Hi, ich bin Marcel Zalec, ein Frontend-Entwickler aus Österreich. Meine Leidenschaft für IT und die unendlichen Möglichkeiten in diesem Bereich treiben mich an, optisch ansprechende und intuitive Websites und Anwendungen zu gestalten.",
+        "content": {
+          "paragraph1": "Ich bin flexibel und arbeite sowohl vor Ort als auch remote effizient und zuverlässig. Offen für neue Herausforderungen, suche ich stets nach Möglichkeiten, mein Wissen und meine Fähigkeiten weiterzuentwickeln.",
+          "paragraph2": "Ich bin aufgeschlossen und stets auf der Suche nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu erweitern.",
+          "paragraph3": "Für mich ist Programmieren nicht nur das Schreiben von Code – es ist eine kreative Art des Problemlösens. Ich schätze es, komplexe technische Anforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln. So unterstütze ich meine Kunden dabei, ihre Ziele zu erreichen und ihre Visionen Wirklichkeit werden zu lassen."
+        }
+    },
+    "skills": {
+        "eyebrow": "Technologien",
+        "headline": "Skills",
+        "description": "Meine berufliche Reise umfasst die Arbeit an diversen Projekten, bei denen ich eine Vielzahl von Frontend-Technologien und Konzepten eingesetzt habe. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Welt der Webentwicklung stets einen Schritt voraus zu sein.",
+        "headline2": {
+          "part1": "Sie benötigen",
+          "part2": "weitere Fähigkeiten?"
+        },
+        "paragraph": "Fühlen Sie sich frei, mich zu kontaktieren. Ich freue mich darauf, mein Wissen weiter auszubauen und neue Herausforderungen anzugehen.",
+        "button": "Sprechen Sie mich an!"
+    },
+    "projects": {
+        "headline": "Vorgestellte Projekte",
+        "about": "Worum geht es in diesem Projekt?",
+        "paragraph": "Entdecken Sie eine Auswahl meiner Arbeiten hier – Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu erleben.",
+        "join": {
+          "name": "Join",
+          "description": "Join ist ein einfaches Drag-and-Drop Kanban Board, geschrieben in HTML, CSS und JavaScript, welches dir ermöglicht Kontakte und Tasks zu verwalten."
+        },
+        "sharky": {
+          "name": "EL Polo Loco",
+          "description": "EL Polo Loco ist ein lauf und hupf Spiel"
+        },
+        "bubble": {
+          "name": "DABubble",
+          "description": "DABubble ist ein Chat-Messenger im Stil von Slack. Das Projekt befindet sich derzeit noch in der Entwicklung."
+        },
+        "button": "Nächstes Projekt"
+    },
+    "testimonials": {
+        "headline": "Was meine Kollegen über mich sagen",
+        "t1": {
+          "name": "",
+          "text": "",
+          "status": ""
+        },
+        "t2": {
+          "name": "",
+          "text": "",
+          "status": ""
+        },
+        "t3": {
+          "name": "",
+          "text": "",
+          "status": ""
+        }
+    },
+    "contact": {
+        "eyebrow": "Jetzt Kontaktieren",
+        "headline": "Lassen Sie uns zusammenarbeiten!",
+        "solve": "Gibt es ein Problem, welches ich lösen soll?",
+        "paragraph": "Kontaktieren Sie mich über dieses Formular – ich freue mich darauf, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+        "paragraph2": "Benötigen Sie einen Frontend-Entwickler?",
+        "span": " Lassen Sie uns sprechen!",
+        "form": {
+          "name": {
+            "label": "Name",
+            "placeholder": "Dein Name",
+            "error": "Bitte gib deinen Namen ein!"
+          },
+          "email": {
+            "label": "E-Mail",
+            "placeholder": "Deine E-Mail Adresse",
+            "error": "Bitte gib deine E-Mail Adresse ein!"
+          },
+          "subject": {
+            "label": "Nachricht",
+            "placeholder": "Deine Nachricht an mich",
+            "error": "Bitte gib eine Nachricht"
+          },
+          "terms": {
+            "label": "",
+            "placeholder": {
+              "part1": "Ich habe die",
+              "a": "Datenschutzerklärung",
+              "part2": "gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden"
+            },
+            "error": "Bitte akzeptiere die Datenschutzbestimmungen"
+          },
+          "submit": "Absenden ;)"
+        }
+    },
+    "footer": {
+        "status": "Webentwickler",
+        "location": "Österreich",
+        "portfolio": "Marcel Zalec",
+        "imprint": "Impressum",
+        "data": "Datenschutzerklärung"
+    }
+}

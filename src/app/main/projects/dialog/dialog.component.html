@@ -1,0 +1,32 @@
+<div class="dialog-bg ">
+    <div class="dialog">
+        <div class="description">
+            <span class="index">{{ currentIndex + 1 }}</span>
+            <h1>{{ project?.name || '' | translate }}</h1>
+            <h3>{{ 'projects.about' | translate }}</h3>
+            <span>{{ project?.description || '' | translate }}</span>
+            <div class="skill-wrapper">
+                <div class="skill-inner" *ngFor="let skill of project?.skillset">
+                    <img src="{{ skill.image }}" />
+                    <p class="karla fs18 fw400">{{ skill.name }}</p>
+                </div>
+            </div>
+            <div class="button-wrapper">
+                <a href="{{ project?.urls?.github }}" target="_blank">
+                    <button>Github</button>
+                </a>
+                <a href="{{ project?.urls?.project }}" target="_blank">
+                    <button>Live Test</button>
+                </a>
+             </div>
+        </div>
+        <img (click)="onClose()" class="closeBtn" src="assets/img/svgs/close_small.svg" alt="">
+        <div>
+            <img src="{{ project?.image}}" alt="">
+        </div>
+        <div class="next" (click)="nextDialog()">
+            <span>Next project</span>
+            <img src="assets/img/svgs/arrow_forward.svg" alt="">
+        </div>
+    </div>
+</div>

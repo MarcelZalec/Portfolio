@@ -1,22 +1,22 @@
 <section>
-    <div>
-        <svg width="84" height="28" viewBox="0 0 84 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.5" y="0.5" width="83" height="27" rx="13.5" stroke="#3DCFB6"/>
-            <rect width="44" height="28" rx="14" fill="#3DCFB6"/>
-            <path d="M16.112 10.284L16.112 12.948H19.952V14.788H16.112V17.62L20.744 17.62L20.744 19.5L13.488 19.5L13.488 8.412L20.736 8.412L20.472 10.284L16.112 10.284ZM27.1778 19.5L24.2578 10.58C24.2951 10.82 24.3351 11.1107 24.3778 11.452C24.4258 11.788 24.4711 12.164 24.5138 12.58C24.5564 12.9907 24.5911 13.428 24.6178 13.892C24.6444 14.356 24.6578 14.8307 24.6578 15.316L24.6578 19.5H22.4258L22.4258 8.412H25.6978L28.5298 17.284C28.4711 16.948 28.4098 16.548 28.3458 16.084C28.2871 15.6147 28.2364 15.092 28.1938 14.516C28.1511 13.94 28.1298 13.3213 28.1298 12.66L28.1298 8.412H30.3618L30.3618 19.5H27.1778Z" fill="white"/>
-            <path d="M59.36 13.94C59.36 12.98 59.2587 12.212 59.056 11.636C58.8533 11.06 58.5867 10.628 58.256 10.34C57.9253 10.052 57.5627 9.86 57.168 9.764C56.7787 9.668 56.3947 9.62 56.016 9.62H54.72L54.72 18.388H56.032C56.4267 18.388 56.8187 18.3267 57.208 18.204C57.6027 18.076 57.9627 17.852 58.288 17.532C58.6133 17.2067 58.872 16.756 59.064 16.18C59.2613 15.5987 59.36 14.852 59.36 13.94ZM60.84 13.94C60.84 14.8573 60.7413 15.6413 60.544 16.292C60.352 16.9373 60.088 17.4707 59.752 17.892C59.416 18.3133 59.032 18.6413 58.6 18.876C58.1733 19.1053 57.7227 19.268 57.248 19.364C56.7787 19.4547 56.3173 19.5 55.864 19.5H53.336L53.336 8.484L55.688 8.484C56.3333 8.484 56.96 8.556 57.568 8.7C58.1813 8.844 58.7333 9.11067 59.224 9.5C59.72 9.884 60.112 10.4333 60.4 11.148C60.6933 11.8627 60.84 12.7933 60.84 13.94ZM64.9938 9.62V13.332L69.0738 13.332V14.476L64.9938 14.476V18.388L70.0017 18.388V19.5L63.6018 19.5L63.6018 8.484L69.8577 8.484L69.6978 9.62L64.9938 9.62Z" fill="#3DCFB6" fill-opacity="0.5"/>
-        </svg>
-        <a (mouseover)="mouseover('about');" (mouseout)="mouseout('about');" href="#aboutme">About me
+    <div class="menu">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider" (click)="this.toggleLanguage()"
+                [ngClass]="{de: this.isGerman, 'slide' : this.isGerman}">
+            </span>
+        </label>
+        <a (mouseover)="mouseover('about');" (mouseout)="mouseout('about');" href="#aboutme">{{ 'header.about' | translate }}
             <div [ngStyle]="{'opacity': this.about ? 1 : 0}" class="circleGreen"></div>
         </a>
-        <a (mouseover)="mouseover('skills');" (mouseout)="mouseout('skills');" href="#skills">Skills
+        <a (mouseover)="mouseover('skills');" (mouseout)="mouseout('skills');" href="#skills">{{ 'header.skills' | translate }}
             <div [ngStyle]="{'opacity': this.skills ? 1 : 0}" class="circleGreen"></div>
         </a>
-        <a (mouseover)="mouseover('projects');" (mouseout)="mouseout('projects');" href="#projects">Projects
+        <a (mouseover)="mouseover('projects');" (mouseout)="mouseout('projects');" href="#projects">{{ 'header.projects' | translate }}
             <div [ngStyle]="{'opacity': this.projects ? 1 : 0}" class="circleGreen"></div>
         </a>
     </div>
-    <div>
+    <div id="logo">
         <a href="">
             <svg width="150" height="90" xmlns="http://www.w3.org/2000/svg"> 
                 <rect width="100%" height="100%" fill="none"/>
@@ -26,4 +26,15 @@
             </svg>
         </a>
     </div>
+    <div id="menu-btn" (click)="openMenu()">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="mask0_3001_2528" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+            <rect width="48" height="48" fill="#D9D9D9"/>
+            </mask>
+            <g mask="url(#mask0_3001_2528)">
+            <path d="M8.769 34.5384C8.55133 34.5384 8.36867 34.4636 8.221 34.3139C8.07367 34.1646 8 33.9794 8 33.7584C8 33.5374 8.07367 33.3558 8.221 33.2134C8.36867 33.0711 8.55133 32.9999 8.769 32.9999H39.231C39.4487 32.9999 39.6313 33.0748 39.779 33.2244C39.9263 33.3738 40 33.5589 40 33.7799C40 34.0009 39.9263 34.1826 39.779 34.3249C39.6313 34.4673 39.4487 34.5384 39.231 34.5384H8.769ZM8.769 24.7689C8.55133 24.7689 8.36867 24.6943 8.221 24.5449C8.07367 24.3953 8 24.2099 8 23.9889C8 23.7679 8.07367 23.5863 8.221 23.4439C8.36867 23.3019 8.55133 23.2309 8.769 23.2309H39.231C39.4487 23.2309 39.6313 23.3056 39.779 23.4549C39.9263 23.6046 40 23.7899 40 24.0109C40 24.2319 39.9263 24.4136 39.779 24.5559C39.6313 24.6979 39.4487 24.7689 39.231 24.7689H8.769ZM8.769 14.9999C8.55133 14.9999 8.36867 14.9251 8.221 14.7754C8.07367 14.6261 8 14.4409 8 14.2199C8 13.9989 8.07367 13.8173 8.221 13.6749C8.36867 13.5326 8.55133 13.4614 8.769 13.4614H39.231C39.4487 13.4614 39.6313 13.5363 39.779 13.6859C39.9263 13.8353 40 14.0204 40 14.2414C40 14.4624 39.9263 14.6441 39.779 14.7864C39.6313 14.9288 39.4487 14.9999 39.231 14.9999H8.769Z" fill="white"/>
+            </g>
+            </svg>
+    </div>
+    <app-menu-dialog *ngIf="dialogOpen" (close)="closeMenu()"></app-menu-dialog>
 </section>

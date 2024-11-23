@@ -34,4 +34,18 @@ span {
         }
     }
 }
-    
+
+@media (max-width: 800px) {
+    section {
+        height: 180px;
+        position: relative;
+        flex-direction: row !important;
+    }
+    #c {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 20px;
+        @include dFlex();
+    }
+}

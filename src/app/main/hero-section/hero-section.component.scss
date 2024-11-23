@@ -34,27 +34,33 @@ section {
     z-index: 100;
     background-color: rgba(255,255,255,0.12);
     position: absolute;
-    @include dFlex(space-around);
-    width: 100vw;
+    @include dFlex(space-around, $g: 48px);
     height: 62px;
-    top: 800px;
+    bottom: 80px;
     left: -40px;
     margin: 12px 32px 12px 32px;
-    gap: 56px;
     transform: rotate(-3deg);
     opacity: 0.5;
-    >div {
-        width: 100vw;
-        background-color: unset;
-        @include dFlex(space-around);
-        animation: slider-animation 15s ease-in-out;
-        animation-iteration-count: infinite;
-        p {
-            // animation: slider-animation 10s ease-in-out;
-            color: $mintGreen;
-            font-size: 32px;
-            line-height: 38.4px;
-        }
+    backdrop-filter: blur(5.3px);
+
+
+    //width: 100vw;
+}
+
+.info-box-text {
+    background-color: unset;
+    @include dFlex(space-around);
+    animation: slider-animation 25s ease-in-out;
+    animation-iteration-count: infinite;
+    span {
+        @include dFlex($g: 48px);
+        width: max-content;
+        color: $mintGreen;
+        font-size: 32px;
+        line-height: 38.4px;
+    }
+    .circleGreen {
+        margin-left: 46px;
     }
 }
 
@@ -80,8 +86,8 @@ section {
 
 .contact {
     background-color: unset;
-    bottom: 189px;
-    right: 100px;
+    bottom: 199px;
+    right: 0px;
     position: absolute;
     @include dFlex(space-around, $g: 10px);
     transform: rotate(-90deg);
@@ -116,7 +122,7 @@ section {
 
 @keyframes slider-animation{
     from {
-        transform: translateX(100vw);
+        transform: translateX(0vw);
     } to {
         transform: translateX(calc(-100vw));
     }
@@ -124,4 +130,29 @@ section {
 
 .sidePoint {
     padding-left: 5px;
+}
+
+@media (max-width: 1050px) {
+    .contact {
+        right: -120px;
+    }
+    .arrow-down {
+        left: -100px;
+    }
+}
+
+@media (max-width: 800px) {
+    .contact,.arrow-down {
+        display: none;
+    }
+    .headline {
+        font-size: 62px !important;
+    }
+    span {
+        font-size: 24px !important;
+    }
+
+    .info-box {
+        width: 100vw;
+    }
 }

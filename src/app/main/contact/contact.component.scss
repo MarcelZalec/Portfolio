@@ -55,6 +55,12 @@ h3 {
     font-weight: 700;
 }
 
+label {
+    color: $normalWhite;
+    font-size: 18px !important;
+    line-height: normal !important;
+}
+
 form {
     @include dFlex(start,start);
     flex-direction: column;
@@ -67,6 +73,9 @@ form {
             flex-direction: column;
             padding: 20px 0px 20px 20px;
             gap: 10px;
+            >span {
+                color: red;
+            }
         }
     }
     input {
@@ -91,11 +100,72 @@ form {
     @include dFlex();
     flex-direction: column;
     >div {
+        @include dFlex();
+        flex-direction: row !important;
         padding-left: unset !important;
+        >div {
+            @include dFlex();
+            height: 100%;
+            >input {
+                width: 33px;
+                height: 20px;
+                border: 2px solid;
+                border-color: $mintGreen;
+            }
+        }
     }
 }
 
 ::placeholder {
     color: rgba($color: #ffffff, $alpha: 0.8);
     font-size: 18px;
+}
+
+// [type="checkbox"] {
+//     position: relative;
+// }
+
+[type="checkbox"] {
+  // position: relative;
+  // left: 15px;
+  // top: -4px;
+  z-index: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    border: 2px solid $mintGreen;
+    background-color: #535353;
+    display: block;
+    content: "";
+    float: left;
+    margin-right: 5px;
+    z-index: 5;
+    position: relative;
+}
+
+[type="checkbox"]:hover{
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    box-shadow: inset 0px 0px 0px 3px #fff;
+    background-color: #8cad2d;
+}
+
+@media (max-width: 800px) {
+    section {
+        @include dFlex($g: 60px);
+        padding: 50px 0px 50px 0px;
+        >div {
+            max-width: 90vw;
+        }
+    }
+    form {
+        width: 90vw;
+    }
 }

@@ -1,0 +1,121 @@
+{
+    "header": {
+        "about": "About Me",
+        "skills": "Skills",
+        "projects": "Projects"
+    },
+    "hero": {
+        "headline": "Frontend Developer",
+        "work": "View Projects",
+        "contact": "Get in Touch",
+        "slider": [
+          { "slide": "Available for Projects" },
+          { "slide": "Based in Austria" },
+          { "slide": "Frontend Developer" },
+          { "slide": "Avaialable for remote work" },
+          { "slide": "Available for Projects" },
+          { "slide": "Based in Austria" },
+          { "slide": "Frontend Developer" },
+          { "slide": "Avaialable for remote work" }
+        ]
+    },
+    "about": {
+        "eyebrow": "Who I Am",
+        "headline": "About me",
+        "description": "Hi, I'm a german speaking Frontend Developer based in Austria. Motivated by the limitless opportunities within IT, I am excited about vrafting visually captivating and intuitive websites an applications.",
+        "content": {
+          "paragraph1": "Flexible in terms of working enviroments, I can work effectively both on-site in Austria and remotely",
+          "paragraph2": "I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills",
+          "paragraph3": "In my profession, programming isn't just about writing code: it's a creative form of problem-solving, I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, i help you achieve your goals and brong your vision to life"
+        }
+    },
+    "skills": {
+        "eyebrow": "Technologies",
+        "headline": "Skills",
+        "description": "My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to Continously enhance my skills and stay ahead in the ever-evolving landscape of web development.",
+        "headline2": {
+          "part1": "You need",
+          "part2": "another skill?"
+        },
+        "paragraph": "Fell free to contact me. I look forward to expanding on my previous knowledge",
+        "button": "Let's talk"
+    },
+    "projects": {
+        "headline": "Portfolio",
+        "about": "Featured Projects",
+        "paragraph": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+        "join": {
+          "name": "Join",
+          "description": ""
+        },
+        "sharky": {
+          "name": "El Polo Loco",
+          "description": "Jump and Run"
+        },
+        "bubble": {
+          "name": "DABubble",
+          "description": ""
+        },
+        "button": "next project"
+    },
+    "testimonials": {
+        "headline": "What my colleagues say about me",
+        "t1": {
+          "name": "",
+          "text": "",
+          "status": ""
+        },
+        "t2": {
+          "name": "",
+          "text": "",
+          "status": ""
+        },
+        "t3": {
+          "name": "",
+          "text": "",
+          "status": ""
+        }
+    },
+    "contact": {
+        "eyebrow": "Contact me",
+        "headline": "Let's work together",
+        "solve": "Got a problem to solve?",
+        "paragraph": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+        "paragraph2": "Need a Frontend developer?",
+        "span": " Let’s talk!",
+        "form": {
+          "name": {
+            "label": "What's your name?",
+            "placeholder": "Your name goes here",
+            "error": "Pleace enter your name!"
+          },
+          "email": {
+            "label": "What's your email?",
+            "placeholder": "youremail@email.com",
+            "error": "Pleace enter your email!"
+          },
+          "subject": {
+            "label": "How can I help you?",
+            "placeholder": "Hello Marcel, I am interested in...",
+            "error": "Pleace enter a message!"
+          },
+          "terms": {
+            "label": "",
+            "placeholder": {
+              "part1": "I've read the",
+              "a": "privacy policy",
+              "part2": " and agree to the processing of my data as outlined."
+            },
+            "error": "Pleace agree teh privacy policy"
+          },
+          "submit": "Say Hello ;)"
+        }
+    },
+    "footer": {
+        "status": "Frontend Developer",
+        "location": "Austria",
+        "portfolio": "Marcel Zalec",
+        "imprint": "Imprint",
+        "data": "Datenschutzerklärung"
+    }
+}

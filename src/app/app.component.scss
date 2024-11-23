@@ -57,7 +57,7 @@ button {
 .border-box {
     @include dFlex(start);
     flex-direction: column;
-    height: 640px;
+    height: auto; //640px
     width: 40vw;
     gap: 20px;
     .border-frame {
@@ -82,8 +82,6 @@ button {
     position: relative;
     top: 0px;
     left: 25px;
-    // height: 100vh;
-    // @include dFlex(center ,start)
 }
 
 .flex-end {
@@ -95,26 +93,4 @@ button {
     position: relative;
     @include dFlex();
     flex-direction: column;
-}
-
-.dialog-bg {
-    @include dFlex();
-    position: absolute;
-    left: 00px;
-    right: 0;
-    bottom: 0;
-    top: 2130px;
-    height: 200%;
-    width: 100%;
-    //background-color: rgba($color: #171717, $alpha: 0.2);
-    background-color: rgba($color: #ffffff, $alpha: 0.2);
-}
-
-.dialog {
-    @include dFlex();
-    background-color: rgba($color: #171717, $alpha: 0.2);
-    width: 50%;
-    height: 50vh;
-    border: 2px solid red;
-    border-radius: 30px;
 }

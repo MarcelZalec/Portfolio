@@ -1,0 +1,53 @@
+@import './../../../app.component.scss';
+
+* {
+    font-family: 'Karla';
+    font-size: 18px;
+}
+
+section {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($color: #000, $alpha: 0.5);
+    z-index: 9999999;
+}
+
+.menu-frame {
+    position: absolute;
+    top: 80px;
+    right: 60px;
+    height: 150px;
+    width: 150px;
+    background: linear-gradient(55.22deg, rgba(28 ,28, 28, 1) 36.26%, rgba(8, 70, 59, 1)) !important;;
+    border: 2px solid $mintGreen;
+    border-radius: 20px;
+    @include dFlex();
+    .menu {
+        @include dFlex($ai: start, $g: 10px);
+        flex-direction: column;
+    }
+}
+
+.circleGreen {
+    width: 4px;
+    height: 4px;
+}
+
+a {
+    text-decoration: unset;
+    &:hover {
+        color: $mintGreen;
+    }
+    &:hover .dot {
+        top: 25px;
+    }
+    >div {
+        position: relative;
+        left: 50%;
+        @include dFlex();
+        gap: 20px;
+    }
+}

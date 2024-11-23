@@ -57,3 +57,25 @@ section {
         color: $normalWhite
     }
 }
+
+@media (max-width: 800px) {
+
+    * {
+        p,span {
+            font-size: 16px !important;
+        }
+    }
+    section {
+        h1 {
+            font-size: 56px;
+        }
+        .flex-end {
+            height: unset;
+            width: 100vw;
+        }
+        .border-box {
+            width: 80%;
+            height: auto;
+        }
+    }
+}

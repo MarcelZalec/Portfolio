@@ -1,34 +1,53 @@
 <section>
-    <h2>Portfolio</h2>
-    <h1>Featured Projects</h1>
-    <span>Explore a selection of my work here - Interact with projects to see my skills in action.</span>
+    <h2>{{ 'projects.headline' | translate }}</h2>
+    <h1>{{ 'projects.about' | translate }}</h1>
+    <span>{{ 'projects.paragraph' | translate }}</span>
     <div>
-        <div class="projects">
-            <div class="project" (mouseover)="mouseover('join');" (mouseout)="mouseout('join');">
-                <p>Join</p>
-                <span>JavaScript HTML CSS Firebase</span>
+        <div class="projects" *ngFor="let project of projectDb; let index = index" (click)="openDialog(index)">
+            <div class="project">
+                <div class="description">
+                    <h3 class="fira fs24 fw700 main">{{ project.name | translate }}</h3>
+                </div>
+          
+                <div class="skills">
+                    <span *ngFor="let skill of project.skillset">{{ skill.name }}</span>
+                </div>
             </div>
-            <div class="project" (mouseover)="mouseover('poloLoco');" (mouseout)="mouseout('poloLoco');">
-                <p>El Polo Loco</p>
-                <span>JavaScript HTML CSS</span>
+            <div class="imgCont" *ngIf="hoverImg === project.name">
+                <img src="{{ project.image }}" alt="" class="projectpic" />
             </div>
-            <div class="project" (click)="openDialog()" (mouseover)="mouseover('bubble');" (mouseout)="mouseout('bubble');">
-                <p>DA Bubble</p>
-                <span>Angular Firebase TypeScript</span>
-            </div>
-        </div>
-        <div class="imgCont">
-            <!-- <img [ngStyle]="{'opacity': this.{{ projectpic }} ? 1 : 0}" class="projectpic" src="assets/img/poloLoco.png" alt="img">
-            <div [ngStyle]="{'opacity': this.{{ projectpic }} ? 1 : 0}">!!</div> -->
         </div>
     </div>
-
-    <div class="dialog-bg d-none">
-        <div class="dialog">
-
-        </div>
-    </div>
-    
+    <app-dialog
+        *ngIf="isDialogOpen"
+        [project]="currentProject"
+        [projectDb]="projectDb"
+        [currentIndex]="currentIndex"
+        (close)="closeDialog()"
+        (updateIndex)="currentIndex = $event"
+    ></app-dialog> 
 </section>
 
 <!-- <img [ngStyle]="{'opacity': this.{{ projectpic }} ? 1 : 0}" src="assets/img/{{ projectpic }}.png" alt="img"> -->
+
+<!-- <div class="project" (mouseover)="mouseover('join');" (mouseout)="mouseout('join');">
+    <p>{{ 'projects.join.name' | translate }}</p>
+    <span>{{ 'projects.join.description' | translate }}</span>
+</div>
+<div class="project" (mouseover)="mouseover('poloLoco');" (mouseout)="mouseout('poloLoco');">
+    <p>{{ 'projects.poloLoco.name' | translate }}</p>
+    <span>{{ 'projects.poloLoco.description' | translate }}</span>
+</div>
+<div class="project" (click)="openDialog()" (mouseover)="mouseover('bubble');" (mouseout)="mouseout('bubble');">
+    <p>{{ 'projects.bubble.name' | translate }}</p>
+    <span>{{ 'projects.bubble.description' | translate }}</span>
+</div> -->
+
+
+
+<!-- <div class="imgCont">
+            <img [ngStyle]="{'opacity': this.join ? 1 : 0}" class="projectpic" src="assets/img/poloLoco.png" alt="img">
+            <img [ngStyle]="{'opacity': this.poloLoco ? 1 : 0}" class="projectpic" src="assets/img/poloLoco.png" alt="img">
+            <img [ngStyle]="{'opacity': this.bubble ? 1 : 0}" class="projectpic" src="assets/img/poloLoco.png" alt="img">
+            <div [ngStyle]="{'opacity': this.join ? 1 : 0}">{{ projectpic }}</div>
+        </div> -->

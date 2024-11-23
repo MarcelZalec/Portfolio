@@ -72,8 +72,30 @@ section {
 
 .selector {
     padding-top: 20px;
+    position: relative;
     img {
         padding: 0px 10px;
+    }
+    #indicators {
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        .indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #949494;
+            display: inline-block;
+            margin: 0px 5px;
+            cursor: pointer;
+
+            &.active {
+                background-color: $mintGreen;
+            }
+        }
     }
 }
 
@@ -96,4 +118,27 @@ section {
 .messages {
     @include dFlex($g: 70px !important);
     overflow-x: hidden;
+}
+
+@media (max-width: 800px) {
+    .say-about {
+        h2 {
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+    .messages {
+        width: 81vw;
+    }
+    .border-box {
+        width: 80vw;
+        height: 360px;
+        .border-frame {
+            width: 80%;
+        }
+    }
+    .qoutes {
+        top: 70px;
+        left: -35%;
+    }
 }

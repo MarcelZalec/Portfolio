@@ -1,12 +1,12 @@
 <section>
     <div>
-        <h2>Contact me</h2>
-        <h1>Let's work <br> together</h1>
+        <h2>{{ 'contact.eyebrow' | translate }}</h2>
+        <h1>{{ 'contact.headline' | translate }}</h1>
         <div>
-            <h3>Got a problem to solve?</h3>
+            <h3>{{ 'contact.solve' | translate }}</h3>
             <div>
-                <span>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</span>
-                <span>Need a Frontend developer? <span class="mint-green">Let’s talk!</span></span>
+                <span>{{ 'contact.paragraph' | translate }}</span>
+                <span>{{ 'contact.paragraph2' | translate }} <span class="mint-green">{{ 'contact.span' | translate }}</span></span>
             </div>
         </div>
     </div>
@@ -14,28 +14,42 @@
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div>
                 <div>
-                    <label>What's your name?</label>
-                    <input [(ngModel)]="contactData.name" name="name" type="text" placeholder="Your name goes here" required>
+                    <label for="name">{{ 'contact.form.name.label' | translate }}</label>
+                    <input #name="ngModel" id="name" [(ngModel)]="contactData.name" name="name" type="text" placeholder="{{ 'contact.form.name.placeholder' | translate }}" required>
+                    @if (!name.valid && name.touched) {
+                        <span>{{ 'contact.form.name.error' | translate }}</span>
+                    }
                 </div>
             </div>
             <div>
                 <div>
-                    <label>What's your email?</label>
-                    <input [(ngModel)]="contactData.email" name="email" type="text" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    <label>{{ 'contact.form.email.label' | translate }}</label>
+                    <input #email="ngModel" id="email" [(ngModel)]="contactData.email" name="email" type="text" placeholder="{{ 'contact.form.email.placeholder' | translate }}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    @if (!email.valid && email.touched) {
+                        <span>{{ 'contact.form.email.error' | translate }}</span>
+                    }
                 </div>
             </div>
             <div>
                 <div>
-                    <label>How can I help you?</label>
-                    <input [(ngModel)]="contactData.message" name="message" type="text" placeholder="Hello Marcel, I am interested in..." required>
+                    <label>{{ 'contact.form.subject.label' | translate }}</label>
+                    <input #message="ngModel" [(ngModel)]="contactData.message" minlength="5" name="message" type="text" placeholder="{{ 'contact.form.subject.placeholder' | translate }}" required>
+                    @if (!message.valid && message.touched) {
+                        <span>{{ 'contact.form.subject.error' | translate }}</span>
+                    }
                 </div>
             </div>
 
             <div class="button-div">
                 <div>
-                    <span>I've read the <span class="mint-green">privacy policy</span> and agree to the processing of my data as outlined.</span>
+                    <div><input id="confirm" type="checkbox"/></div>
+                    <label>{{ 'contact.form.terms.placeholder.part1' | translate }}<span class="mint-green"> {{ 'contact.form.terms.placeholder.a' | translate }}</span> {{ 'contact.form.terms.placeholder.part2' | translate }}</label>
+                    <!-- <span>{{ 'contact.form.terms.placeholder.part1' | translate }}<span class="mint-green"> {{ 'contact.form.terms.placeholder.a' | translate }}</span> {{ 'contact.form.terms.placeholder.part2' | translate }}</span> -->
+                    @if (false) {
+                        <span>{{ 'contact.form.terms.error' | translate }}</span>
+                    }
                 </div>
-                <button type="submit" value="Say Hello :)"><p>Say Hello ;)</p></button>
+                <button type="submit" value="Say Hello :)"><p>{{ 'contact.form.submit' | translate }}</p></button>
             </div>
         </form>
     </div>

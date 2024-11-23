@@ -1,21 +1,14 @@
 <section>
     <div>
-        <span>Frontend Developer</span>
+        <span>{{ 'hero.headline' | translate }}</span>
         <p class="headline">Marcel Zalec</p>
         <div class="buttons">
-            <button><p>Check my work</p></button>
-            <button><p>Contact me</p></button>
+            <button><p>{{ 'hero.work' | translate }}</p></button>
+            <button href="contact"><p>{{ 'hero.contact' | translate }}</p></button>
         </div>
         <div class="info-box">
-            <div>
-                <div class="circleGreen"></div>
-                <p>Frontend Developer</p>
-                <div class="circleGreen"></div>
-                <p>Based in Austria</p>
-                <div class="circleGreen"></div>
-                <p>Avaialable for remote work</p>
-                <div class="circleGreen"></div>
-                <p>Open to work</p>
+            <div class="info-box-text" *ngFor="let item of 'hero.slider' | translate">
+                <span >{{ item.slide }}</span>
                 <div class="circleGreen"></div>
             </div>
         </div>
@@ -39,8 +32,8 @@
         </div>
     </div>
 </section>
-<app-about-me ></app-about-me>
-<app-skills></app-skills>
-<app-projects></app-projects>
+<app-about-me id="aboutme"></app-about-me>
+<app-skills id="skills"></app-skills>
+<app-projects id="projects"></app-projects>
 <app-references></app-references>
-<app-contact></app-contact>
+<app-contact id="contact"></app-contact>
