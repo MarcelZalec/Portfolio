@@ -20,7 +20,7 @@ export class ProjectsComponent {
 
   projectDb: Project[] = [];
   currentProject: Project | null = null;
-  isDialogOpen = false;
+  public isDialogOpen = false;
   currentIndex: number = 0;
   hoverImg: string;
 

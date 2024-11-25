@@ -3,8 +3,8 @@
         <span>{{ 'hero.headline' | translate }}</span>
         <p class="headline">Marcel Zalec</p>
         <div class="buttons">
-            <button><p>{{ 'hero.work' | translate }}</p></button>
-            <button href="contact"><p>{{ 'hero.contact' | translate }}</p></button>
+            <a class="button" href="#projects"><p>{{ 'hero.work' | translate }}</p></a>
+            <a class="button" href="#contact"><p>{{ 'hero.contact' | translate }}</p></a>
         </div>
         <div class="info-box">
             <div class="info-box-text" *ngFor="let item of 'hero.slider' | translate">

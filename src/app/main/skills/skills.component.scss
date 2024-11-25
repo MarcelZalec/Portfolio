@@ -68,20 +68,17 @@ section {
     }
 }
 
-@media (max-width: 1050px) {
-    
-}
-
-@media (max-width: 800px) {
+@media (max-width: 1120px) {
     section {
-        gap: 50px;
-        width: 100vw;
         height: unset;
+        gap: 50px;
         padding: 150px 0px;
+        flex-direction: column;
+        width: 100vw;
         .border-box, .skill-symbols {
             width: 85vw;
             height: auto;
             justify-content: center;
-        } 
+        }
     }
 }

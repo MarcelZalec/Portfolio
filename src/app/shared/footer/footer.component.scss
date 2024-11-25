@@ -10,7 +10,15 @@ section {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 100px;
+    height: 180px;
+    position: relative;
+    >div {
+        position: absolute;
+    }
+}
+
+.left10 {
+    left: 10%;
 }
 
 span {
@@ -19,18 +27,54 @@ span {
     font-weight: 400;
 }
 
+svg {
+    font-weight: bold;
+    text {
+        font-family: 'Karla';
+    }
+    &:hover {
+        text {
+            cursor: pointer;
+            fill: gray;
+        }
+    }
+}
+
 .links_social {
     display: flex;
     flex-direction: column;
     text-decoration: unset;
     font-size: 14px;
     line-height: 21.6px;
+    position: absolute;
+    right: 10%;
     a {
         color: $normalWhite;
         text-decoration: unset;
+        @include dFlex($jc: start, $g: 10px);
+        position: relative;
+        padding-left: 10px;
 
         &:hover {
             color: $mintGreen !important;
+            cursor: pointer;
+        }
+
+        &:hover .dot {
+            top: 25px;
+        }
+        
+        .circleGreen {
+            position: absolute;
+            z-index: 999999;
+            left: 0px;
+            display: none;
+        }
+
+        &:hover {
+            .circleGreen {
+                display: flex;
+            }
         }
     }
 }

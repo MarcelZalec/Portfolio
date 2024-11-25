@@ -1,7 +1,7 @@
 <div class="dialog-bg ">
     <div class="dialog">
         <div class="description">
-            <span class="index">{{ currentIndex + 1 }}</span>
+            <span class="index">0{{ currentIndex + 1 }}</span>
             <h1>{{ project?.name || '' | translate }}</h1>
             <h3>{{ 'projects.about' | translate }}</h3>
             <span>{{ project?.description || '' | translate }}</span>
@@ -13,10 +13,10 @@
             </div>
             <div class="button-wrapper">
                 <a href="{{ project?.urls?.github }}" target="_blank">
-                    <button>Github</button>
+                    <button class="button">Github</button>
                 </a>
                 <a href="{{ project?.urls?.project }}" target="_blank">
-                    <button>Live Test</button>
+                    <button class="button">Live Test</button>
                 </a>
              </div>
         </div>

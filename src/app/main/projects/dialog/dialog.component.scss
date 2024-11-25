@@ -1,5 +1,9 @@
 @import '../../../app.component.scss';
 
+a {
+    text-decoration: none;
+}
+
 .dialog-bg {
     @include dFlex();
     position: absolute;
@@ -13,14 +17,16 @@
 }
 
 .dialog {
-    position: absolute;
+    position: relative;
+    left: 0;
+    right: 0;
     @include dFlex();
     flex-direction: row;
     padding: 20px;
     background-color: rgba($color: #171717, $alpha: 0.9);
     z-index: 999;
     width: 50%;
-    height: 50vh;
+    height: 60vh;
     border: 2px solid rgba($color: $mintGreen, $alpha: 0.4);
     border-radius: 30px;
 }
@@ -36,18 +42,24 @@
 
 .description {
     width: 50%;
+    @include dFlex($ai: start, $g: 20px);
+    flex-direction: column;
     .index {
-        color: rgba($color: $mintGreen, $alpha: 1.0);
+        color: $mintGreen;
+        font-size: 128px;
     }
     h1{
-        color: rgba($color: $mintGreen, $alpha: 1.0);
+        font-size: 64px;
+        //color: $mintGreen;
     }
     h3 {
-        font-size: 24px
+        font-size: 24px;
+        color: $mintGreen;
     }
     >div {
         @include dFlex($jc: start, $g:20px);
-        flex-wrap: wrap,
+        flex-wrap: wrap;
+        font-size: 18px
     }
 }
 
@@ -73,13 +85,61 @@
     right: 20px;
     bottom: 20px;
     @include dFlex();
-    cursor: pointer;
+    // cursor: pointer;
     img {
         width: 30px !important;
         height: 30px !important;
     }
 
     &:hover {
-        color: rgba($color: $mintGreen, $alpha: 1.0);
+        cursor: pointer;
+        >span {
+            color: $mintGreen;
+        }
+    }
+}
+
+@media (max-width: 1120px) {
+    .dialog-bg {
+        top: 3000px;
+    }
+    .dialog {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .dialog-bg {
+        top: 3200px;
+    }
+    .dialog {
+        @include dFlex();
+        flex-direction: column-reverse;
+        width: 80vw;
+        height: 90vh;
+    }
+    .description {
+        width: unset;
+        h1 {
+            font-size: 56px;
+        }
+        h3 {
+            font-size: 20px;
+        }
+        .index {
+            font-size: 72px;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .dialog-bg {
+        top: 3600px;
+    }
+}
+
+@media (max-width: 420px) {
+    .dialog-bg {
+        top: 3800px;
     }
 }

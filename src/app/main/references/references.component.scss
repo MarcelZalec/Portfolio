@@ -100,12 +100,17 @@ section {
 }
 
 .arrows {
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+        path {
+            fill: $mintGreen;
+        }
+    }
 }
 
 .left {
     &:hover {
-        transform: translateX(-5px);
+        transform: translateX(-5px);        
     }
 }
 

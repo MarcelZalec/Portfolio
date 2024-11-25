@@ -48,6 +48,7 @@ section {
 }
 
 .info-box-text {
+    position: relative;
     background-color: unset;
     @include dFlex(space-around);
     animation: slider-animation 25s ease-in-out;
@@ -153,6 +154,6 @@ section {
     }
 
     .info-box {
-        width: 100vw;
+        // width: 100vw;
     }
 }

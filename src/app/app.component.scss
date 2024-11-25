@@ -19,15 +19,17 @@ $normalWhite: rgb(255, 255, 255, 1) !important;
     
 }
 
-button {
+.button {
     border-color: $normalWhite;
-    width: fill(172px);
     gap: 10px;
     padding: 0px 24px;
+    border: 1px solid $normalWhite;
     border-radius: 25px;
     height: 48px;
     background: unset;
     overflow-x: hidden;
+    @include dFlex();
+    text-decoration: none;
 
     &:hover {
         cursor: pointer;
@@ -47,8 +49,8 @@ button {
 }
 
 .circleGreen {
-    width: 8px;
-    height: 8px;
+    width: 4px;
+    height: 4px;
     border-radius: 100%;
     border: 1px solid $mintGreen;
     background-color: $mintGreen;

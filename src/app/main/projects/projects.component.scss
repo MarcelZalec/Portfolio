@@ -70,6 +70,15 @@ section {
     @include dFlex();
 }
 
+@media (max-width: 1000px) {
+    section>span {
+        width: 80vw;
+    }
+    .projects {
+        width: 80vw;
+    }
+}
+
 @media (max-width: 800px) {
     section {
         // padding-left: 20px;
@@ -79,13 +88,6 @@ section {
         h1 {
             font-size: 24px;
         }
-        >span {
-            width: 80vw;
-        }
-    }
-
-    .projects {
-        width: 80vw;
     }
 }
 

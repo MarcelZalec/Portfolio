@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { AboutMeComponent } from '../about-me/about-me.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { ProjectsComponent } from '../projects/projects.component';
@@ -10,7 +10,16 @@ import { TranslatePipe} from '@ngx-translate/core';
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [AboutMeComponent, SkillsComponent, ProjectsComponent, ReferencesComponent, ContactComponent, NgStyle, CommonModule , TranslatePipe],
+  imports: [
+    AboutMeComponent,
+    SkillsComponent,
+    ProjectsComponent,
+    ReferencesComponent,
+    ContactComponent,
+    NgStyle,
+    CommonModule,
+    TranslatePipe,
+  ],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })

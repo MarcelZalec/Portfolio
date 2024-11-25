@@ -1,12 +1,6 @@
 <section (click)="onClose()">
     <div class="menu-frame">
         <div class="menu">
-            <!-- <label class="switch">
-                <input type="checkbox">
-                <span class="slider" 
-                    [ngClass]="{de: this.isGerman, 'slide' : this.isGerman}">
-                </span>
-            </label> -->
             <a (mouseover)="mouseover('about');" (mouseout)="mouseout('about');" href="#aboutme">{{ 'header.about' | translate }}
                 <div [ngStyle]="{'opacity': this.about ? 1 : 0}" class="circleGreen"></div>
             </a>
@@ -16,6 +10,12 @@
             <a (mouseover)="mouseover('projects');" (mouseout)="mouseout('projects');" href="#projects">{{ 'header.projects' | translate }}
                 <div [ngStyle]="{'opacity': this.projects ? 1 : 0}" class="circleGreen"></div>
             </a>
+            <!-- <label class="switch">
+                <input type="checkbox">
+                <span class="slider" 
+                    [ngClass]="{de: this.isGerman, 'slide' : this.isGerman}">
+                </span>
+            </label> -->
         </div>
     </div>
 

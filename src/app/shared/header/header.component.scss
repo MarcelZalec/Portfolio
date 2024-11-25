@@ -42,6 +42,12 @@ section {
 svg {
     font-family: 'Karla';
     font-weight: bold;
+    &:hover {
+      text {
+          cursor: pointer;
+          fill: gray;
+      }
+    }
 }
 
 
@@ -129,9 +135,9 @@ svg {
     transform: translateX(36px);
   }
   
-  .mobile-view {
-    display: none;
-  }
+  // .mobile-view {
+  //   display: none;
+  // }
 
   /* menu button */
   #menu-btn {

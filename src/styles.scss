@@ -14,6 +14,7 @@ $mintGreen: rgba(61, 207, 182, 1);
   scroll-behavior: smooth;
   // backdrop-filter: blur(90px);
   overflow-x: hidden;
+  cursor: default;
   section {
     background-color: rgb(23, 23, 23);
     width: 100vw;
@@ -27,6 +28,23 @@ $mintGreen: rgba(61, 207, 182, 1);
 
 body {
   width: 100vw;
+}
+
+.noScroll {
+  overflow: hidden;
+}
+
+.mover {
+  z-index: -1;
+  position: fixed;
+  background-color: hsla(170, 60%, 53%, 0.5);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  opacity: 0.3;
+  filter: blur(10px);
+  box-shadow: 0 0 20px #3dcfb7bb, 0 0 40px #3dcfb7c0, 0 0 60px #3dcfb7bb;
+  transform: translate(-50%, -50%);
 }
 
 ::-webkit-scrollbar {
