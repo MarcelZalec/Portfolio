@@ -78,6 +78,11 @@ a {
     top: 30px;
     right: 30px;
     cursor: pointer;
+    &:hover {
+        path {
+            fill: $mintGreen;
+        }
+    }
 }
 
 .next {
@@ -85,16 +90,36 @@ a {
     right: 20px;
     bottom: 20px;
     @include dFlex();
-    // cursor: pointer;
-    img {
-        width: 30px !important;
-        height: 30px !important;
-    }
 
     &:hover {
         cursor: pointer;
         >span {
             color: $mintGreen;
+        }
+        svg {
+            path {
+                fill: $mintGreen;
+                transform: translateX( +2px);
+            }
+        }
+    }
+}
+
+.button {
+    @include dFlex($g:10px);
+    flex-direction: row;
+    svg {
+        path {
+            fill: white;
+        }
+    }
+    &:hover {
+        color: $mintGreen;
+        svg {
+            transform: translateX( +2px) translateY( -2px);
+            path {
+                fill: $mintGreen;
+            }
         }
     }
 }

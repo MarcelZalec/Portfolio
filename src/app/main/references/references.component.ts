@@ -15,37 +15,44 @@ export class ReferencesComponent {
   currentMessage:number = 0;
   autor:string = "";
   comment:string = "";
+  status:string = "";
   sayAbout = [
     {
-      comment: "Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
-      autor: "H.Janisch - Team Partner",
+      comment: "testimonials.t1.text",
+      autor: "testimonials.t1.name",
+      status:"testimonials.t1.status",
     },
     {
-      comment: "Peters here",
-      autor: "H.Peters - Team Partner",
+      comment: "testimonials.t2.text",
+      autor: "testimonials.t2.name",
+      status:"testimonials.t2.status",
     },
     {
-      comment: "Tesssssssst",
-      autor: "H.Buchas - Team Partner",
+      comment: "testimonials.t3.text",
+      autor: "testimonials.t3.name",
+      status:"testimonials.t3.status",
     },
   ];
+
+  sayAboutlength:any = this.sayAbout.length;
 
   constructor() {
     this.activMessage();
   }
 
   forward() {
-    this.currentMessage = (this.currentMessage + 1) % this.sayAbout.length;
+    this.currentMessage = (this.currentMessage + 1) % this.sayAboutlength;
     this.activMessage()
   }
 
   backward() {
-    this.currentMessage = (this.currentMessage - 1 + this.sayAbout.length ) % this.sayAbout.length;
+    this.currentMessage = (this.currentMessage - 1 + this.sayAboutlength ) % this.sayAbout.length;
     this.activMessage()
   }
 
   activMessage() {
     this.autor = this.sayAbout[this.currentMessage].autor;
     this.comment = this.sayAbout[this.currentMessage].comment;
+    this.status = this.sayAbout[this.currentMessage].status;
   }
 }

@@ -30,10 +30,10 @@ export class ProjectsService {
     {
       name: 'projects.join.name',
       tag: 'join',
-      image: 'assets/img/poloLoco.png',
+      image: 'assets/img/join.jpg',
       description: 'projects.join.description',
       urls: {
-        project: 'https://join.kai-schulz.dev/',
+        project: 'https://join.marcelzalec.at/',
         github: '',
       },
       skillset: [
@@ -61,8 +61,8 @@ export class ProjectsService {
       image: 'assets/img/poloLoco.png',
       description: 'projects.sharky.description',
       urls: {
-        project: 'https://sharky.kai-schulz.dev/',
-        github: 'https://github.com/sprrwDE/sharkie',
+        project: 'https://elpololoco.marcelzalec.at/',
+        github: '',
       },
       skillset: [
         {
@@ -82,10 +82,10 @@ export class ProjectsService {
     {
       name: 'projects.bubble.name',
       tag: 'bubble',
-      image: 'assets/img/poloLoco.png',
+      image: '',
       description: 'projects.bubble.description',
       urls: {
-        project: '',
+        project: 'https://dabubble.marcelzalec.at/',
         github: '',
       },
       skillset: [

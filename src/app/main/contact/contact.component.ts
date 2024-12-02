@@ -14,16 +14,20 @@ export class ContactComponent {
 
   http = inject(HttpClient)
   mailTest = true;
+  pricacyWarning:boolean = false;
 
   contactData = {
     name: "",
     email: "",
     message: "",
+    privacy: false,
   }  
 
-  onSubmit_TT(ngForm: NgForm) {
-    if (ngForm.valid && ngForm.submitted) {
-      console.log(this.contactData);
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.valid  && ngForm.form.valid && ngForm.submitted && this.contactData.privacy) {
+      this.sendMail(ngForm)
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      ngForm.resetForm();
     }
   }
 
@@ -38,22 +42,26 @@ export class ContactComponent {
     },
   };
 
-  onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
+  sendMail(ngForm: NgForm) {    
+    this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      .subscribe({
+        next: (response) => {
+          ngForm.resetForm();
+          this.resetContactData()
+        },
+        error: (error) => {
+          console.error(error);
+        },
+        complete: () => console.info('send post complete'),
+      });
+  }
 
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-      ngForm.resetForm();
-    }
+  resetContactData() {
+    this.contactData = {
+      name: "",
+      email: "",
+      message: "",
+      privacy: false,
+    } 
   }
 }

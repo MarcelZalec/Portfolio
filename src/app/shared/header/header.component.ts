@@ -11,21 +11,18 @@ import { MenuDialogComponent } from './menu-dialog/menu-dialog.component';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  defaultLanguage: string = 'en';
   isGerman:boolean = false;
   about:boolean = false;
   skills:boolean = false;
   projects:boolean = false;
   dialogOpen:boolean = false;
 
-  constructor(private translate: TranslateService) {
-    this.translate.setDefaultLang(this.defaultLanguage)
+  constructor(private translate: TranslateService) {}
+
+
+  ngOnInit(): void {
+    this.loadLanguageFromLocalStorage();
   }
-
-
-  // ngOnInit(): void {
-  //   this.loadLanguageFromLocalStorage();
-  // }
 
   mouseover(e: string) {
     e === 'about' ? (this.about = true) : null;

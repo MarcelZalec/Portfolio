@@ -16,6 +16,10 @@
           { "slide": "Available for Projects" },
           { "slide": "Based in Austria" },
           { "slide": "Frontend Developer" },
+          { "slide": "Avaialable for remote work" },
+          { "slide": "Available for Projects" },
+          { "slide": "Based in Austria" },
+          { "slide": "Frontend Developer" },
           { "slide": "Avaialable for remote work" }
         ]
     },
@@ -61,19 +65,19 @@
     "testimonials": {
         "headline": "What my colleagues say about me",
         "t1": {
-          "name": "",
-          "text": "",
-          "status": ""
+          "name": "H.Perters",
+          "text": "Peters here",
+          "status": "Team Partner"
         },
         "t2": {
-          "name": "",
-          "text": "",
-          "status": ""
+          "name": "H.Janisch",
+          "text": "Marcel has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
+          "status": "Team Partner"
         },
         "t3": {
-          "name": "",
-          "text": "",
-          "status": ""
+          "name": "H.Leitner",
+          "text": "Test",
+          "status": "Team Partner"
         }
     },
     "contact": {
@@ -106,7 +110,7 @@
               "a": "privacy policy",
               "part2": " and agree to the processing of my data as outlined."
             },
-            "error": "Pleace agree teh privacy policy"
+            "error": "Pleace agree the privacy policy"
           },
           "submit": "Say Hello ;)"
         }
@@ -116,6 +120,6 @@
         "location": "Austria",
         "portfolio": "Marcel Zalec",
         "imprint": "Imprint",
-        "data": "Datenschutzerklärung"
+        "data": "Privacy policy"
     }
 }

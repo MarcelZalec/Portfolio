@@ -19,15 +19,16 @@ section {
     position: absolute;
     top: 80px;
     right: 60px;
-    height: 150px;
+    height: 190px;
     width: 150px;
     background: linear-gradient(55.22deg, rgba(28 ,28, 28, 1) 36.26%, rgba(8, 70, 59, 1)) !important;;
     border: 2px solid $mintGreen;
     border-radius: 20px;
     @include dFlex();
     .menu {
-        @include dFlex($ai: start, $g: 10px);
+        @include dFlex($ai: start, $g: 15px);
         flex-direction: column;
+        position: relative;
     }
 }
 
@@ -47,6 +48,29 @@ a {
     }
 }
 
+.switch {
+    font-family: "karla";
+    position: relative;
+    display: inline-block;
+    width: 84px;
+    height: 28px;
+    color: rgb(41, 136, 120);
+    transition: all 125ms ease-in-out;
+  
+    &:hover {
+      color: hsla(170, 60%, 53%, 1);
+    }
+  
+    >div {
+      position: absolute;
+      top: 5px;
+      width: 100%;
+      @include dFlex($jc: space-between);
+      flex-direction: row;
+      padding: 0px 11px;
+    }
+  }
+
 /* Hide default HTML checkbox */
 .switch input {
     opacity: 0;
@@ -65,6 +89,7 @@ a {
     border-radius: 100px;
     transition: all 125ms ease-in-out;
     border: 1px solid white;
+    height: 26px;
   
     &:hover {
       border: 1px solid hsla(170, 60%, 53%, 0.5);
@@ -79,7 +104,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 26.5px;
+    height: 27px;
     width: 48px;
     inset: -1px;
     background-color: #3dcfb6;

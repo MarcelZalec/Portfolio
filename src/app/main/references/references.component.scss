@@ -43,6 +43,7 @@ section {
 .border-box {
     @include dFlex();
     background: linear-gradient(90deg, #1C1C1C 0%, rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 0) 90%, #1C1C1C 100%);
+    background: unset;
     width: 630px;
     height: 280px;
     .border-frame {

@@ -16,6 +16,10 @@
             { "slide": "Verfügbar für Projekte" },
             { "slide": "Aus Österreich" },
             { "slide": "Frontend Entwickler" },
+            { "slide": "Verfügbar für fern Arbeit" },
+            { "slide": "Verfügbar für Projekte" },
+            { "slide": "Aus Österreich" },
+            { "slide": "Frontend Entwickler" },
             { "slide": "Verfügbar für fern Arbeit" }
         ]
     },
@@ -61,19 +65,19 @@
     "testimonials": {
         "headline": "Was meine Kollegen über mich sagen",
         "t1": {
-          "name": "",
-          "text": "",
-          "status": ""
+          "name": "H.Perters",
+          "text": "Peters ist hier",
+          "status": "Team-Partner"
         },
         "t2": {
-          "name": "",
-          "text": "",
-          "status": ""
+          "name": "H.Janisch",
+          "text": "Marcel hat sich als verlässlicher Gruppenpartner erwiesen. Seine technischen Fähigkeiten und sein proaktiver Ansatz waren entscheidend für den Erfolg unseres Projekts.",
+          "status": "Team-Partner"
         },
         "t3": {
-          "name": "",
-          "text": "",
-          "status": ""
+          "name": "H.Leitner",
+          "text": "Test",
+          "status": "Team-Partner"
         }
     },
     "contact": {

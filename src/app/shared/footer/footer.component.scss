@@ -84,6 +84,9 @@ svg {
         height: 180px;
         position: relative;
         flex-direction: row !important;
+        >div {
+            bottom: 70px;
+        }
     }
     #c {
         position: absolute;

@@ -1,0 +1,18 @@
+@import './../../app.component.scss';
+
+* {
+    font-family: 'Karla';
+    // @include dFlex();
+}
+
+section {
+    height: unset;
+    >div {
+        padding: 20px 40px;
+    }
+    a {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

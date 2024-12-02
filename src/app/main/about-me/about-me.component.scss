@@ -23,9 +23,10 @@ section {
         text-align: left;
     }
     img {
-        width: 568px;
         height: 568px;
         border-radius: 30px;
+        background-size: cover;
+        background-position: center;
     }
 }
 
@@ -66,8 +67,16 @@ section {
         }
     }
     section {
+        height: unset;
+        gap: 60px;
+        padding-top: 60px;
         h1 {
             font-size: 56px;
+        }
+        .flex-start {
+            width: 100%;
+            @include dFlex();
+            position: unset;
         }
         .flex-end {
             height: unset;
@@ -76,6 +85,17 @@ section {
         .border-box {
             width: 80%;
             height: auto;
+        }
+        img {
+            width: unset;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    section {
+        img {
+            height: 400px;
         }
     }
 }

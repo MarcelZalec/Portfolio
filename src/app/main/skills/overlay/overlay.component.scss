@@ -1,0 +1,16 @@
+@import './../../../app.component.scss';
+
+* {
+    color: $mintGreen;
+    font-size: 16px;
+}
+
+div {
+    @include dFlex($g:20px);
+    flex-direction: column;
+    text-align: center;
+    >div {
+        @include dFlex($g:10px);
+        flex-direction: row;
+    }
+}

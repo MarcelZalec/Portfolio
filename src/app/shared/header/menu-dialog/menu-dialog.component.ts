@@ -13,18 +13,19 @@ import { HeaderComponent } from '../header.component';
 export class MenuDialogComponent {
   @Output() close = new EventEmitter<void>();
 
-  defaultLanguage: string = 'de';
   isGerman:boolean = false;
   about:boolean = false;
   skills:boolean = false;
   projects:boolean = false;
 
-  constructor(private translate: TranslateService) {
-    this.translate.setDefaultLang(this.defaultLanguage)
-  }
+  constructor(private translate: TranslateService) {}
 
   onClose() {
     this.close.emit();
+  }
+
+  ngOnInit(): void {
+    this.loadLanguageFromLocalStorage();
   }
 
   mouseover(e: string) {
@@ -51,7 +52,24 @@ export class MenuDialogComponent {
     }
   }
 
+  private loadLanguageFromLocalStorage(): void {
+    const storedLanguage = localStorage.getItem('selectedLanguage');
+    if (storedLanguage) {
+      this.translate.use(storedLanguage);
+      if (storedLanguage === 'de') {
+        this.isGerman = true;
+      }
+    } else {
+      this.translate.use('en');
+      this.isGerman = false;
+    }
+  }
+
   private saveLanguageToLocalStorage(language: string): void {
     localStorage.setItem('selectedLanguage', language);
+  }
+
+  onEvent(event:any) {
+    event.stopPropagation();
   }
 }

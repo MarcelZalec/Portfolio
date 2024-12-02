@@ -1,12 +1,13 @@
 @import '../../app.component.scss';
 
 section {
+    position: relative;
     font-family: 'Karla';
     background: linear-gradient(55.22deg, rgba(28 ,28, 28, 1) 36.26%, rgba(8, 70, 59, 1));
     width: 100%;
     height: calc(100vh - 96px);
     @include dFlex();
-    overflow-x: hidden;
+    overflow: hidden;
 
     >div {
         background: unset;
@@ -30,6 +31,21 @@ section {
     }
 }
 
+.sidePoint {
+    position: unset;
+}
+
+.symbols {
+    &:hover {
+        svg {
+            cursor: pointer;
+            path {
+                fill: $normalWhite;
+            }
+        }
+    }
+}
+
 .info-box {
     z-index: 100;
     background-color: rgba(255,255,255,0.12);
@@ -42,16 +58,13 @@ section {
     transform: rotate(-3deg);
     opacity: 0.5;
     backdrop-filter: blur(5.3px);
-
-
-    //width: 100vw;
 }
 
 .info-box-text {
     position: relative;
     background-color: unset;
     @include dFlex(space-around);
-    animation: slider-animation 25s ease-in-out;
+    animation: slider-animation 30s ease-in-out;
     animation-iteration-count: infinite;
     span {
         @include dFlex($g: 48px);
@@ -87,7 +100,7 @@ section {
 
 .contact {
     background-color: unset;
-    bottom: 199px;
+    bottom: 193px;
     right: 0px;
     position: absolute;
     @include dFlex(space-around, $g: 10px);
@@ -111,6 +124,11 @@ section {
             color: $mintGreen;
         }
     }
+
+    .circleGreen {
+        position: relative;
+        bottom: 0px;
+    }
 }
 
 .rotate-90 {
@@ -127,10 +145,6 @@ section {
     } to {
         transform: translateX(calc(-100vw));
     }
-}
-
-.sidePoint {
-    padding-left: 5px;
 }
 
 @media (max-width: 1050px) {
@@ -152,8 +166,17 @@ section {
     span {
         font-size: 24px !important;
     }
+}
 
-    .info-box {
-        // width: 100vw;
+@media (max-width: 500px) {
+    .buttons {
+        gap: 10%;
+    }
+}
+
+@media (max-width: 400px) {
+    .buttons {
+        flex-direction: column;
+        gap: 20px;
     }
 }

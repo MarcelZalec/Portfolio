@@ -69,10 +69,9 @@ form {
         width: 100%;
         border-top: 1px solid $mintGreen;
         >div {
-            @include dFlex($ai: start);
-            flex-direction: column;
+            @include dFlex($ai: start, $g: 10px);
+            flex-direction: column !important;
             padding: 20px 0px 20px 20px;
-            gap: 10px;
             >span {
                 color: red;
             }
@@ -91,6 +90,13 @@ form {
         color: $mintGreen;
         font-size: 24px;
         line-height: 28.8px;
+    }
+    a {
+        text-decoration: unset;
+        &:hover {
+            color: $normalWhite;
+            cursor: pointer;
+        }
     }
     }
 
@@ -121,25 +127,33 @@ form {
     font-size: 18px;
 }
 
+label {
+    display: flex;
+    gap: 10px;
+    input {
+        width: 40px;
+    }
+}
+
 // [type="checkbox"] {
 //     position: relative;
 // }
 
 [type="checkbox"] {
-  // position: relative;
-  // left: 15px;
-  // top: -4px;
+  position: relative;
+  left: 5px;
+  top: 14px;
   z-index: 0;
   -webkit-appearance: none;
   appearance: none;
 }
 
 [type="checkbox"] {
-    width: 15px;
-    height: 15px;
+    width: 30px !important;
+    height: 17px;
     border-radius: 5px;
-    border: 2px solid $mintGreen;
-    background-color: #535353;
+    border: 2px solid $mintGreen !important;
+    background-color: #535353 !important;
     display: block;
     content: "";
     float: left;
@@ -154,7 +168,26 @@ form {
 
 input[type="checkbox"]:checked {
     box-shadow: inset 0px 0px 0px 3px #fff;
-    background-color: #8cad2d;
+    background-color: #8cad2d !important;
+}
+
+.button:disabled {
+    &:hover {
+        border-color: red !important;
+        p {
+            color: red;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    section {
+        @include dFlex($g: 60px);
+        flex-direction: column;
+        >div {
+            max-width: 90%;
+        }
+    }
 }
 
 @media (max-width: 800px) {
@@ -163,9 +196,25 @@ input[type="checkbox"]:checked {
         padding: 50px 0px 50px 0px;
         >div {
             max-width: 90vw;
+            h1 {
+                font-size: 56px;
+            }
         }
     }
     form {
         width: 90vw;
+    }
+}
+
+@media (max-width: 500px) {
+    section>div>h1 {
+        font-size: 40px;
+        word-break: break-all;
+    }
+}
+
+@media (min-width: 1725px) {
+    #confirm {
+        top: unset;
     }
 }

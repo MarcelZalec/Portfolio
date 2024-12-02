@@ -19,11 +19,11 @@ section {
         // line-height: 64px;
     }
     >span,.project {
-        padding: 12px 0px;
+        padding: 20px 0px;
         border-bottom: 1px solid $mintGreen
     }
     >span {
-        width: 880px;
+        width: 60vw;
         padding: 50px 0px;
     }
     .description {
@@ -32,7 +32,7 @@ section {
 }
 
 .projects {
-    width: 880px;
+    width: 60vw;
     p {
         padding: 0px 12px;
         font-family: 'Fira Code';
@@ -50,19 +50,32 @@ section {
     flex: 1;
     .projectpic {
         @include dFlex();
-        width: 200px;
-        height: 150px;
+        width: 300px;
+        height: 200px;
         position: absolute;
-        right: 8%;
-        border-radius: 20px
+        right: 10%;
+        border-radius: 20px;
     }
 }
 
 .project {
     @include dFlex(space-between);
+        .description {
+           @include dFlex($g: 10px);
+           flex-direction: row;
+           .arrowUp {
+               display: none;
+           }
+        }
         &:hover {
             background-color: rgba($color: $mintGreen, $alpha: 0.5);
             cursor: pointer;
+            .description>.arrowUp {
+                display: flex;
+                path {
+                    fill: $normalWhite;
+                }
+            }
         }
 }
 
@@ -70,12 +83,21 @@ section {
     @include dFlex();
 }
 
-@media (max-width: 1000px) {
-    section>span {
-        width: 80vw;
+@media (max-width: 1300px) {
+    .imgCont {
+        .projectpic {
+            right: 2%;
+            width: 200px;
+            height: 150px;
+        }
     }
-    .projects {
-        width: 80vw;
+}
+
+@media (max-width: 1200px) {
+    .imgCont {
+        .projectpic {
+            right: 4%;
+        }
     }
 }
 
@@ -88,12 +110,26 @@ section {
         h1 {
             font-size: 24px;
         }
+        span {
+            width: 80vw;
+        }
+    }
+    .projects {
+        width: 80vw;
+    }
+    .project {
+        @include dFlex($ai: start, $g: 10px);
+        flex-direction: column;
+    }
+    .imgCont {
+        display: none;
     }
 }
 
 @media (max-width: 600px) {
     section {
-        padding: 150px 0px;
+        padding-left: 20px;
+        @include dFlex();
     }
     .project{
         >.skills {
