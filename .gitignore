@@ -42,3 +42,5 @@ testem.log
 Thumbs.db
 dsgvo.txt
 imprint.txt
+/src/assets/img
+!/src/assets/img/svgs
