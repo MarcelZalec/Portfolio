@@ -18,16 +18,21 @@ section {
         font-weight: 700;
         // line-height: 64px;
     }
-    >span,.project {
+    .project {
         padding: 20px 0px;
         border-bottom: 1px solid $mintGreen
     }
-    >span {
-        width: 60vw;
-        padding: 50px 0px;
-    }
+
     .description {
         padding-left: 20px;
+    }
+}
+
+.mainDiv {
+    width: 90%;
+    >span {
+        padding: 50px 0px;
+        border-bottom: 1px solid $mintGreen
     }
 }
 

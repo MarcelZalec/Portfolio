@@ -34,7 +34,7 @@ export class ProjectsService {
       description: 'projects.join.description',
       urls: {
         project: 'https://join.marcelzalec.at/',
-        github: '',
+        github: 'https://github.com/MarcelZalec/JOIN.git',
       },
       skillset: [
         {
@@ -62,7 +62,7 @@ export class ProjectsService {
       description: 'projects.sharky.description',
       urls: {
         project: 'https://elpololoco.marcelzalec.at/',
-        github: '',
+        github: 'https://github.com/MarcelZalec/El_Polo_Loco.git',
       },
       skillset: [
         {

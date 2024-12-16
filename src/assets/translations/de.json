@@ -113,7 +113,8 @@
             "error": "Bitte akzeptiere die Datenschutzbestimmungen"
           },
           "submit": "Absenden ;)"
-        }
+        },
+        "successe": "Erfolgreich gesendet"
     },
     "footer": {
         "status": "Webentwickler",

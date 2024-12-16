@@ -52,7 +52,7 @@ section {
     position: absolute;
     @include dFlex(space-around, $g: 48px);
     height: 62px;
-    bottom: 80px;
+    bottom: 140px;
     left: -40px;
     margin: 12px 32px 12px 32px;
     transform: rotate(-3deg);
@@ -64,7 +64,7 @@ section {
     position: relative;
     background-color: unset;
     @include dFlex(space-around);
-    animation: slider-animation 30s ease-in-out;
+    animation: slider-animation 30s ease-out;
     animation-iteration-count: infinite;
     span {
         @include dFlex($g: 48px);

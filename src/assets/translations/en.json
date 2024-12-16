@@ -113,7 +113,8 @@
             "error": "Pleace agree the privacy policy"
           },
           "submit": "Say Hello ;)"
-        }
+        },
+        "successe": "Sent successfully"
     },
     "footer": {
         "status": "Frontend Developer",

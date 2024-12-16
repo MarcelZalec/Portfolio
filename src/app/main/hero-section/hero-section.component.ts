@@ -24,22 +24,17 @@ import { TranslatePipe} from '@ngx-translate/core';
   styleUrl: './hero-section.component.scss'
 })
 export class HeroSectionComponent {
-  mouseOver:boolean = false;
   github:boolean = false;
+  linkedin:boolean = false;
 
 
   hover(id:string) {
     id === 'github' ? (this.github = true): null;
-    id === 'linkedin' ? (this.github = true): null;
+    id === 'linkedin' ? (this.linkedin = true): null;
   }
 
   hoverOut(id:string) {
     id === 'github' ? (this.github = false): null;
-    id === 'linkedin' ? (this.github = false): null;
-  }
-
-  checkMouseOver(ismouseOver: boolean) {
-    this.mouseOver = ismouseOver;
-    console.log("dfsdf");
+    id === 'linkedin' ? (this.linkedin = false): null;
   }
 }

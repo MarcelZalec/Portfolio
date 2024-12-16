@@ -1,5 +1,5 @@
 <section>
-    <div>
+    <div class="slideInAnimation-left animElement">
         <h2>{{ 'contact.eyebrow' | translate }}</h2>
         <h1>{{ 'contact.headline' | translate }}</h1>
         <div>
@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-    <div>
+    <div class="slideInAnimation-right animElement">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div>
                 <div>
@@ -42,17 +42,19 @@
 
             <div class="button-div">
                 <div>
-                    <label><input #privacy="ngModel" [(ngModel)]="contactData.privacy" name="privacy" id="confirm" type="checkbox" class="input" required />
+                    <label><input (click)="enableButton(contactForm)" #privacy="ngModel" [(ngModel)]="contactData.privacy" name="privacy" id="confirm" type="checkbox" class="input" required />
                     <div>
                         {{ 'contact.form.terms.placeholder.part1' | translate }}<a href="privacy" class="mint-green"> {{ 'contact.form.terms.placeholder.a' | translate }}</a> {{ 'contact.form.terms.placeholder.part2' | translate }}
                     </div></label>
-                    <!-- <span>{{ 'contact.form.terms.placeholder.part1' | translate }}<span class="mint-green"> {{ 'contact.form.terms.placeholder.a' | translate }}</span> {{ 'contact.form.terms.placeholder.part2' | translate }}</span> -->
                     @if (!privacy.valid && privacy.touched) {
                         <span>{{ 'contact.form.terms.error' | translate }}</span>
                     }
                 </div>
-                <button class="button" type="submit"><p>{{ 'contact.form.submit' | translate }}</p></button>
+                <button [disabled]="!validate" class="button" type="submit"><p>{{ 'contact.form.submit' | translate }}</p></button>
             </div>
         </form>
+    </div>
+    <div id="sendDialog" [ngStyle]="{'opacity': this.sendSuccesseful ? 1 : 0 }">
+        <span>{{ 'contact.successe' | translate }}</span>
     </div>
 </section>

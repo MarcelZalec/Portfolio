@@ -1,8 +1,9 @@
 import { CommonModule, NgStyle } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { DialogComponent } from './dialog/dialog.component';
 import { ProjectsService, Project } from '../../services/project-data.service';
+import { AnimationService } from '../../services/animation.service';
 
 @Component({
   selector: 'app-projects',
@@ -11,12 +12,7 @@ import { ProjectsService, Project } from '../../services/project-data.service';
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
-export class ProjectsComponent {
-
-  // join:boolean = false;
-  // poloLoco:boolean = false;
-  // bubble:boolean = false;
-  // projectpic:string = "";
+export class ProjectsComponent extends AnimationService {
 
   projectDb: Project[] = [];
   currentProject: Project | null = null;
@@ -24,7 +20,8 @@ export class ProjectsComponent {
   currentIndex: number = 0;
   hoverImg: string;
 
-  constructor(private projectService: ProjectsService) {
+  constructor(private projectService: ProjectsService, elRef: ElementRef) {
+    super(elRef);
     this.projectDb = this.projectService.getProjects();
     this.hoverImg = '';
   }
@@ -39,20 +36,4 @@ export class ProjectsComponent {
     this.currentProject = null; 
     this.isDialogOpen = false;
   }
-
-
-
-  // mouseover(project:string) {
-  //   project === 'join' ? (this.join = true): null;
-  //   project === 'poloLoco' ? (this.poloLoco = true): null;
-  //   project === 'bubble' ? (this.bubble = true): null;
-  //   this.projectpic = project;
-  // }
-
-  // mouseout(project:string) {
-  //   project === 'join' ? (this.join = false): null;
-  //   project === 'poloLoco' ? (this.poloLoco = false): null;
-  //   project === 'bubble' ? (this.bubble = false): null;
-  //   this.projectpic = project;
-  // }
 }

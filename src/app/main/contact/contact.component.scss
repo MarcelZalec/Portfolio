@@ -9,6 +9,7 @@ section {
     @include dFlex(space-evenly, start);
     padding: 150px 50px 200px 0px;
     height: auto;
+    position: relative;
     >div{
         @include dFlex(start, start);
         flex-direction: column;
@@ -82,9 +83,13 @@ form {
         width: 100%;
         color: $normalWhite;
         font-family: 'Karla';
-        background-color: rgb(23, 23, 23);
+        background-color: #1C1C1C;
         outline: unset;
         border: unset;
+    }
+    input:-webkit-autofill {
+        -webkit-text-fill-color: $normalWhite;
+        transition: background-color 5000s ease-in-out 0s;
     }
     label {
         color: $mintGreen;
@@ -172,11 +177,33 @@ input[type="checkbox"]:checked {
 }
 
 .button:disabled {
+    border-color: red !important;
+    p {
+        color: red;
+    }
     &:hover {
-        border-color: red !important;
-        p {
-            color: red;
+        cursor: not-allowed;
+    }
+}
+
+#sendDialog {
+    :host {
+        body {
+            opacity: 0.4;
         }
+    }
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    @include dFlex();
+    padding: 20px;
+    background-color: rgba($color: #0000, $alpha: 0.8);
+    border: 2px solid $mintGreen;
+    border-radius: 20px;
+    height: 30px;
+    >span {
+        font-size: 24px;
+        color: rgba($color: #ffffff, $alpha: 0.8);
     }
 }
 

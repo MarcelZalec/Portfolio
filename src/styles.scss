@@ -1,10 +1,26 @@
 $mintGreen: rgba(61, 207, 182, 1);
 
-@mixin dFlex($jc: center, $ai: center, $g: 0px) {
-  display: flex;
-  justify-content: $jc;
-  align-items: $ai;
-  gap: $g;
+@mixin slideInAnimation ($translateX: 50%) {
+  opacity: 0;
+  transform: scale(0.6) translateX($translateX);
+  transition: all 0.5s ease-in-out;
+}
+
+.slideInAnimation-right {
+  opacity: 0;
+  transform: scale(0.6) translateX(50%);
+  transition: all 0.5s ease-in-out;
+}
+
+.slideInAnimation-left {
+  opacity: 0;
+  transform: scale(0.6) translateX(-50%);
+  transition: all 0.5s ease-in-out;
+}
+
+.visible {
+  opacity: 1 !important;
+  transform:scale(1) translateX(0%) rotate(0deg) !important;
 }
 
 /* You can add global styles to this file, and also import other style files */
@@ -16,7 +32,7 @@ $mintGreen: rgba(61, 207, 182, 1);
   overflow-x: hidden;
   cursor: default;
   section {
-    background-color: rgb(23, 23, 23);
+    background-color: #1C1C1C;
     width: 100vw;
     height: 100vh;
   }

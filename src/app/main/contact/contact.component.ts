@@ -1,27 +1,32 @@
+import { NgStyle } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslatePipe } from '@ngx-translate/core';
+import { AnimationService } from '../../services/animation.service';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, TranslatePipe],
+  imports: [FormsModule, TranslatePipe, NgStyle],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent {
+export class ContactComponent extends AnimationService {
 
   http = inject(HttpClient)
   mailTest = true;
   pricacyWarning:boolean = false;
+  validate:boolean = false;
+  checkValidation: any;
+  sendSuccesseful:boolean = false;
 
   contactData = {
     name: "",
     email: "",
     message: "",
     privacy: false,
-  }  
+  }
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.valid  && ngForm.form.valid && ngForm.submitted && this.contactData.privacy) {
@@ -32,7 +37,7 @@ export class ContactComponent {
   }
 
   post = {
-    endPoint: 'http://marcelzalec.at/sendMail.php',
+    endPoint: 'https://marcelzalec.at/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -52,8 +57,15 @@ export class ContactComponent {
         error: (error) => {
           console.error(error);
         },
-        complete: () => console.info('send post complete'),
+        complete: () => {
+          // console.info('send post complete');
+          this.sendSuccesseful = true;
+          setTimeout(()=> {
+            this.sendSuccesseful = false;
+          })
+        },
       });
+      window.clearInterval(this.checkValidation)
   }
 
   resetContactData() {
@@ -63,5 +75,15 @@ export class ContactComponent {
       message: "",
       privacy: false,
     } 
+  }
+
+  enableButton(ngForm: NgForm) {
+    this.checkValidation = setInterval(() => {
+      if (ngForm.valid  && ngForm.form.valid && this.contactData.privacy) {
+        this.validate = true;
+      } else {
+        this.validate = false;
+      }
+    },1900)
   }
 }
