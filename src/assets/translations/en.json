@@ -42,7 +42,10 @@
           "part2": "another skill?"
         },
         "paragraph": "Fell free to contact me. I look forward to expanding on my previous knowledge",
-        "button": "Let's talk"
+        "button": "Let's talk",
+        "overlay": {
+          "headline": "I have a special interest in learning"
+        }
     },
     "projects": {
         "headline": "Portfolio",

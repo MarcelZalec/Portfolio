@@ -42,7 +42,10 @@
           "part2": "weitere Fähigkeiten?"
         },
         "paragraph": "Fühlen Sie sich frei, mich zu kontaktieren. Ich freue mich darauf, mein Wissen weiter auszubauen und neue Herausforderungen anzugehen.",
-        "button": "Sprechen Sie mich an!"
+        "button": "Sprechen Sie mich an!",
+        "overlay": {
+          "headline": "Ich habe ein besonderes Interesse diese Technologien zu erlernen"
+        }
     },
     "projects": {
         "headline": "Vorgestellte Projekte",

@@ -75,11 +75,11 @@ section {
         flex-direction: column;
         text-align: center;
     }
-    >.popUpCont {
+    .popUpCont {
         display: none;
         position: absolute;
         background-color: $normalWhite;
-        width: 160px;
+        width: 220px;
         padding: 10px;
         bottom: 100px;
         border-radius: 25px;

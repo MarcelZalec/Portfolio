@@ -103,7 +103,7 @@ form {
             cursor: pointer;
         }
     }
-    }
+}
 
 .button-div {
     padding-left: 0px;
@@ -135,45 +135,40 @@ form {
 label {
     display: flex;
     gap: 10px;
+}
+
+.privacy {
     input {
-        width: 40px;
+        width: unset;
     }
-}
 
-// [type="checkbox"] {
-//     position: relative;
-// }
+    [type="checkbox"] {
+        -webkit-appearance: none;
+        appearance: none;
+    }
 
-[type="checkbox"] {
-  position: relative;
-  left: 5px;
-  top: 14px;
-  z-index: 0;
-  -webkit-appearance: none;
-  appearance: none;
-}
+    [type="checkbox"] {
+        width: 20px !important;
+        height: 20px;
+        border: 2px solid $mintGreen !important;
+        border-radius: 5px;
+        background-color: unset;
+        display: block;
+        float: left;
+        margin-right: 10px;
+        z-index: 5;
+        position: relative;
+    }
 
-[type="checkbox"] {
-    width: 30px !important;
-    height: 17px;
-    border-radius: 5px;
-    border: 2px solid $mintGreen !important;
-    background-color: #535353 !important;
-    display: block;
-    content: "";
-    float: left;
-    margin-right: 5px;
-    z-index: 5;
-    position: relative;
-}
+    input[type="checkbox"]:checked {
+        background-color: #8cad2d !important;
+    }
 
-[type="checkbox"]:hover{
-    cursor: pointer;
-}
-
-input[type="checkbox"]:checked {
-    box-shadow: inset 0px 0px 0px 3px #fff;
-    background-color: #8cad2d !important;
+    [type="checkbox"]:hover{
+        cursor: pointer;
+        background-color: gray;
+        // box-shadow: 0px 0px 3px 3px colors.$bg-color;
+    }
 }
 
 .button:disabled {
