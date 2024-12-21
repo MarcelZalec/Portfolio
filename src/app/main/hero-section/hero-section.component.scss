@@ -8,6 +8,7 @@ section {
     height: calc(100vh - 96px);
     @include dFlex();
     overflow: hidden;
+    max-height: unset;
 
     >div {
         background: unset;

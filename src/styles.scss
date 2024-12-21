@@ -43,7 +43,11 @@ $mintGreen: rgba(61, 207, 182, 1);
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
+  background-color: black;
 }
 
 .noScroll {

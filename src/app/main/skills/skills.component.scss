@@ -25,23 +25,29 @@ section {
         letter-spacing: -0.03em;
         text-align: left;
     }
-    >div>div>div>div>h2 {
-        width: 100%;
-        @include dFlex(start);
-        color: $normalWhite;
-        >p{
-            font-size: 24px !important;
+    .border-frame {
+        h2 {
+            width: 100%;
+            @include dFlex(start);
+            color: $normalWhite;
+            >p{
+                font-size: 24px !important;
+            }
         }
     }
+}
+
+.description {
+    padding: 0px 30px;
 }
 
 .skill-symbols {
     @include dFlex(start);
     flex-wrap: wrap;
     width: 40vw;
-    // height: 100%;
     gap: 72px;
     position: relative;
+    padding: 0px 30px ;
     >div {
         width: 100px;
         @include dFlex();

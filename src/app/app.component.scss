@@ -21,6 +21,12 @@ $normalWhite: rgb(255, 255, 255, 1) !important;
     }
 }
 
+section {
+    @include dFlex();
+    max-width: 1920px;
+    max-height: 1440px;
+}
+
 .buttons{
     background: unset;
     @include dFlex();
@@ -96,7 +102,7 @@ $normalWhite: rgb(255, 255, 255, 1) !important;
 }
 
 .flex-end {
-    height: 100vh;
+    height: 100%;
     @include dFlex(center ,end)
 }
 
