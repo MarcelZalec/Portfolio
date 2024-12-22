@@ -45,3 +45,15 @@
 <app-projects id="projects"></app-projects>
 <app-references></app-references>
 <app-contact id="contact"></app-contact>
+
+<app-dialog
+    [ngClass]="{'d-none': !this.dialogService.open }"
+    [ngStyle]="{opacity: this.dialogService.opacity}"
+
+    [project]="this.dialogService.currentProject"
+    [projectDb]="this.dialogService.projectDb"
+    [currentIndex]="this.dialogService.currentIndex"
+    (updateIndex)="this.dialogService.currentIndex = $event"
+
+    (close)="this.dialogService.closeDialog()"
+></app-dialog>

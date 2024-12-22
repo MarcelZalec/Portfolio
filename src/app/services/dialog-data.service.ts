@@ -1,4 +1,5 @@
 import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
+import { Project, ProjectsService } from './project-data.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +12,16 @@ export class DialogDataService {
   opacity: string = '0';
   containerOpacity: string = "";
   private renderer: Renderer2;
+  currentIndex: number = 0;
+  projectDb: Project[] = [];
+  currentProject: Project | null = null;
 
   constructor(
     public rendererFactory: RendererFactory2,
+    private projectService: ProjectsService,
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
+    this.projectDb = this.projectService.getProjects();
   }
 
   toggleScrollBehav() {
@@ -37,5 +43,10 @@ export class DialogDataService {
       this.open = false;
       this.translationX = 'translateX(150%)';
     }, 125);
+  }
+
+  setProject(index:number) {
+    this.currentProject = this.projectDb[index];
+    this.currentIndex = index;
   }
 }

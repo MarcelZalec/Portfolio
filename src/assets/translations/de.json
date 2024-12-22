@@ -51,9 +51,10 @@
         "headline": "Vorgestellte Projekte",
         "about": "Worum geht es in diesem Projekt?",
         "paragraph": "Entdecken Sie eine Auswahl meiner Arbeiten hier – Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu erleben.",
+        "projects_about": "Worum geht es bei diesem Projekt?",
         "join": {
           "name": "Join",
-          "description": "Join ist ein einfaches Drag-and-Drop Kanban Board, geschrieben in HTML, CSS und JavaScript, welches dir ermöglicht Kontakte und Tasks zu verwalten."
+          "description": "Task-Manager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu."
         },
         "sharky": {
           "name": "EL Polo Loco",

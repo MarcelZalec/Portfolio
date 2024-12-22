@@ -1,32 +1,38 @@
 @import '../../../app.component.scss';
 
+*{
+    font-family: 'Karla';
+}
+
 a {
     text-decoration: none;
 }
 
+.mobile.dialog {
+    display: none;
+}
+
 .dialog-bg {
     @include dFlex();
-    position: absolute;
-    top: 2600px;
+    position: fixed;
+    top: 0;
     left: 0;
-    right: 0;
-    height: 100vh;
+    height: 95%;
     width: 100%;
-    //background-color: rgba($color: #171717, $alpha: 0.2);
     background-color: rgba($color: #ffffff, $alpha: 0.01);
+    backdrop-filter: blur(3px);
 }
 
 .dialog {
-    position: relative;
-    left: 0;
-    right: 0;
+    position: absolute;
+    bottom: 0;
     @include dFlex();
     flex-direction: row;
     padding: 20px;
     background-color: rgba($color: #171717, $alpha: 0.9);
     z-index: 999;
     width: 50%;
-    height: 60vh;
+    height: 90%;
     border: 2px solid rgba($color: $mintGreen, $alpha: 0.4);
     border-radius: 30px;
 }
@@ -37,6 +43,14 @@ a {
         width: 300px;
         height: 200px;
         border-radius: 30px;
+    }
+    &::-webkit-scrollbar {
+        width: 5px;
+        border-radius: 50%;
+        background-color: unset;
+    }
+    &::-webkit-scrollbar-track {
+        margin: 20px 0px;
     }
 }
 
@@ -50,7 +64,6 @@ a {
     }
     h1{
         font-size: 64px;
-        //color: $mintGreen;
     }
     h3 {
         font-size: 24px;
@@ -77,11 +90,14 @@ a {
     position: absolute;
     top: 30px;
     right: 30px;
-    cursor: pointer;
     &:hover {
+        cursor: pointer;
         path {
             fill: $mintGreen;
         }
+    }
+    >div, ::nth-child() {
+        width: 100%;
     }
 }
 
@@ -93,6 +109,9 @@ a {
 
     &:hover {
         cursor: pointer;
+        >span,svg {
+            cursor: pointer;
+        }
         >span {
             color: $mintGreen;
         }
@@ -124,26 +143,40 @@ a {
     }
 }
 
+.mobile-closeBtn {
+    width: 100%;
+    @include dFlex($jc: flex-end);
+}
+
 @media (max-width: 1120px) {
-    .dialog-bg {
-        top: 3000px;
-    }
     .dialog {
-        width: 80vw;
+        width: 80%;
     }
 }
 
 @media (max-width: 800px) {
+    .desktop-dialog {
+        display: none !important;
+    }
+
+    .mobile.dialog {
+        display: flex;
+    }
+
     .dialog-bg {
-        top: 3200px;
+        height: 100%
     }
     .dialog {
-        @include dFlex();
         flex-direction: column-reverse;
-        width: 80vw;
-        height: 90vh;
+        overflow-y: scroll;
+        bottom: unset;
+        div,span,p,h1,h2,h3 {
+            overflow: hidden;
+        }
     }
     .description {
+        min-height: fit-content;
+        padding-bottom: 70px;
         width: unset;
         h1 {
             font-size: 56px;
@@ -155,16 +188,12 @@ a {
             font-size: 72px;
         }
     }
-}
-
-@media (max-width: 520px) {
-    .dialog-bg {
-        top: 3600px;
+    .imgCont {
+        padding-top: 40px;
+        min-height: fit-content;
     }
-}
 
-@media (max-width: 420px) {
-    .dialog-bg {
-        top: 3800px;
+    .closeBtn {
+        top: -45px;
     }
 }

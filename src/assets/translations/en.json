@@ -51,17 +51,18 @@
         "headline": "Portfolio",
         "about": "Featured Projects",
         "paragraph": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+        "projects_about": "What is this project about ?",
         "join": {
           "name": "Join",
-          "description": ""
+          "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
         },
         "sharky": {
           "name": "El Polo Loco",
-          "description": "Jump and Run"
+          "description": "El Polo Loco is a jump and run game"
         },
         "bubble": {
           "name": "DABubble",
-          "description": ""
+          "description": "DABubble is a chat messenger in the style of Slack. The project is currently still in development."
         },
         "button": "next project"
     },

@@ -44,7 +44,7 @@
                 <div class="privacy">
                     <label><input (click)="enableButton(contactForm)" #privacy="ngModel" [(ngModel)]="contactData.privacy" name="privacy" id="confirm" type="checkbox" class="input" required />
                     <div>
-                        {{ 'contact.form.terms.placeholder.part1' | translate }}<a href="privacy" class="mint-green"> {{ 'contact.form.terms.placeholder.a' | translate }}</a> {{ 'contact.form.terms.placeholder.part2' | translate }}
+                        {{ 'contact.form.terms.placeholder.part1' | translate }}<a href="privacy" target="_blank" class="mint-green"> {{ 'contact.form.terms.placeholder.a' | translate }}</a> {{ 'contact.form.terms.placeholder.part2' | translate }}
                     </div></label>
                     @if (!privacy.valid && privacy.touched) {
                         <span>{{ 'contact.form.terms.error' | translate }}</span>

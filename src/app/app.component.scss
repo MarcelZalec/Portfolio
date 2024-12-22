@@ -85,6 +85,7 @@ section {
         border-radius: 30px;
         padding: 32px;
         gap: 40px;
+        box-sizing: unset;
     }
     h2 {
         width: 100%;
@@ -110,4 +111,10 @@ section {
     position: relative;
     @include dFlex();
     flex-direction: column;
+}
+
+@media (max-width: 1000px) {
+    section {
+        max-height: unset;
+    }
 }

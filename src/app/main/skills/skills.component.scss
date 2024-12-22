@@ -37,9 +37,9 @@ section {
     }
 }
 
-.description {
-    padding: 0px 30px;
-}
+// .description {
+//     padding: 0px 30px;
+// }
 
 .skill-symbols {
     @include dFlex(start);
@@ -47,7 +47,7 @@ section {
     width: 40vw;
     gap: 72px;
     position: relative;
-    padding: 0px 30px ;
+    // padding: 0px 30px ;
     >div {
         width: 100px;
         @include dFlex();

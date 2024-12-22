@@ -6,12 +6,22 @@
 }
 
 section {
+    @include dFlex($ai: start);
+    flex-direction: column;
     height: calc(100vh - 276px);
     >div>div {
         padding: 20px 0px;
     }
     >div,>p {
         margin: 0px 50px;
+    }
+    a {
+        // text-decoration: none;
+        // font-weight: 600;
+        &:hover {
+            cursor: pointer;
+            color: $mintGreen;
+        }
     }
 
 }

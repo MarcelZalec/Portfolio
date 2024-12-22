@@ -4,6 +4,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { DialogComponent } from './dialog/dialog.component';
 import { ProjectsService, Project } from '../../services/project-data.service';
 import { AnimationService } from '../../services/animation.service';
+import { DialogDataService } from '../../services/dialog-data.service';
 
 @Component({
   selector: 'app-projects',
@@ -20,20 +21,19 @@ export class ProjectsComponent extends AnimationService {
   currentIndex: number = 0;
   hoverImg: string;
 
-  constructor(private projectService: ProjectsService, elRef: ElementRef) {
+  constructor(private projectService: ProjectsService, elRef: ElementRef, public dialogService: DialogDataService,) {
     super(elRef);
     this.projectDb = this.projectService.getProjects();
     this.hoverImg = '';
   }
 
   openDialog(index: number) {
-    this.currentProject = this.projectDb[index];
-    this.isDialogOpen = true;
-    this.currentIndex = index;
-  }
-
-  closeDialog() {
-    this.currentProject = null; 
-    this.isDialogOpen = false;
+    this.dialogService.setProject(index)
+    this.dialogService.toggleScrollBehav();
+    this.dialogService.open = true;
+    setTimeout(() => {
+      this.dialogService.opacity = '1';
+      this.dialogService.translationX = 'translateX(0px)';
+    }, 21);
   }
 }

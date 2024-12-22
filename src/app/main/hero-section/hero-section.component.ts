@@ -6,6 +6,8 @@ import { ReferencesComponent } from '../references/references.component';
 import { ContactComponent } from '../contact/contact.component';
 import { CommonModule, NgStyle } from '@angular/common';
 import { TranslatePipe} from '@ngx-translate/core';
+import { DialogDataService } from '../../services/dialog-data.service';
+import { DialogComponent } from '../projects/dialog/dialog.component';
 
 @Component({
   selector: 'app-hero-section',
@@ -19,6 +21,7 @@ import { TranslatePipe} from '@ngx-translate/core';
     NgStyle,
     CommonModule,
     TranslatePipe,
+    DialogComponent
   ],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
@@ -26,7 +29,9 @@ import { TranslatePipe} from '@ngx-translate/core';
 export class HeroSectionComponent {
   github:boolean = false;
   linkedin:boolean = false;
+  dialogOpen: boolean = false;
 
+  public dialogService = inject(DialogDataService);
 
   hover(id:string) {
     id === 'github' ? (this.github = true): null;

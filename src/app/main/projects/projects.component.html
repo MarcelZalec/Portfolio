@@ -29,14 +29,4 @@
             </div>
         </div>
     </div>
-    <app-dialog
-        *ngIf="isDialogOpen"
-        [project]="currentProject"
-        [projectDb]="projectDb"
-        [currentIndex]="currentIndex"
-        (close)="closeDialog()"
-        (updateIndex)="currentIndex = $event"
-    ></app-dialog> 
 </section>
-
-<!-- *ngIf="hoverImg === project.name" -->

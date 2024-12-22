@@ -31,6 +31,7 @@ $mintGreen: rgba(61, 207, 182, 1);
   // backdrop-filter: blur(90px);
   overflow-x: hidden;
   cursor: default;
+  box-sizing: border-box;
   section {
     background-color: #1C1C1C;
     width: 100vw;

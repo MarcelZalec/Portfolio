@@ -6,13 +6,17 @@
 }
 
 section {
+    @include dFlex($ai: start);
+    flex-direction: column;
     height: unset;
+    max-height: unset;
     >div {
         padding: 20px 40px;
     }
     a {
         &:hover {
             cursor: pointer;
+            color: $mintGreen;
         }
     }
 }
