@@ -28,6 +28,10 @@ section {
     }
 }
 
+.headlineProjects {
+    padding-left: 30px;
+}
+
 .mainDiv {
     width: 90%;
     >span {
@@ -142,6 +146,7 @@ section {
 
 @media (max-width: 600px) {
     section {
+        padding-top: 50px;
         padding-left: 20px;
         @include dFlex();
     }
@@ -149,5 +154,8 @@ section {
         >.skills {
             display: none;
         }
+    }
+    .headlineProjects {
+        padding-left: 0px;
     }
 }

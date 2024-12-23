@@ -8,8 +8,8 @@ a {
     text-decoration: none;
 }
 
-.mobile.dialog {
-    display: none;
+.desktop-dialog {
+    display: flex !important;
 }
 
 .dialog-bg {
@@ -87,24 +87,24 @@ a {
 }
 
 .closeBtn {
-    position: absolute;
-    top: 30px;
-    right: 30px;
     &:hover {
         cursor: pointer;
         path {
             fill: $mintGreen;
         }
     }
-    >div, ::nth-child() {
-        width: 100%;
-    }
+    // >div, ::nth-child {
+    //     width: 100%;
+    // }
+}
+
+.desktop-closeBtn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
 }
 
 .next {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
     @include dFlex();
 
     &:hover {
@@ -122,6 +122,12 @@ a {
             }
         }
     }
+}
+
+.desktop-next {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
 }
 
 .button {
@@ -143,9 +149,52 @@ a {
     }
 }
 
+// mobile dialog:
+
+.mobile-dialog {
+    display: none !important;
+    flex-direction: column-reverse;
+    overflow-y: scroll;
+    bottom: unset;
+    justify-content: unset;
+
+    div,span,p,h1,h2,h3 {
+        overflow: hidden;
+    }
+    >div>img {
+        width: 250px;
+        height: 150px;
+    }
+    >div {
+        min-height: fit-content;
+    }
+}
+
 .mobile-closeBtn {
     width: 100%;
     @include dFlex($jc: flex-end);
+}
+
+.mobile-description {
+    padding-bottom: 20px;
+    width: unset;
+    h1 {
+        font-size: 56px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .index {
+        font-size: 72px;
+    }
+}
+
+.mobile-next {
+    width: 100%;
+    .next {
+        justify-content: flex-end;
+        width: 100%;
+    }
 }
 
 @media (max-width: 1120px) {
@@ -159,41 +208,11 @@ a {
         display: none !important;
     }
 
-    .mobile.dialog {
-        display: flex;
+    .mobile-dialog {
+        display: flex !important;
     }
 
     .dialog-bg {
         height: 100%
-    }
-    .dialog {
-        flex-direction: column-reverse;
-        overflow-y: scroll;
-        bottom: unset;
-        div,span,p,h1,h2,h3 {
-            overflow: hidden;
-        }
-    }
-    .description {
-        min-height: fit-content;
-        padding-bottom: 70px;
-        width: unset;
-        h1 {
-            font-size: 56px;
-        }
-        h3 {
-            font-size: 20px;
-        }
-        .index {
-            font-size: 72px;
-        }
-    }
-    .imgCont {
-        padding-top: 40px;
-        min-height: fit-content;
-    }
-
-    .closeBtn {
-        top: -45px;
     }
 }

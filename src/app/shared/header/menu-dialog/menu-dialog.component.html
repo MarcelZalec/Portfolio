@@ -1,10 +1,10 @@
 <section (click)="onClose()">
     <div class="menu-frame">
         <div class="menu">
-            <a (mouseover)="mouseover('about');" (mouseout)="mouseout('about');" href="#aboutme">{{ 'header.about' | translate }}
+            <a (mouseover)="mouseover('about');" (mouseout)="mouseout('about');" href="#aboutme-mobile">{{ 'header.about' | translate }}
                 <div [ngStyle]="{'opacity': this.about ? 1 : 0}" class="circleGreen"></div>
             </a>
-            <a (mouseover)="mouseover('skills');" (mouseout)="mouseout('skills');" href="#skills">{{ 'header.skills' | translate }}
+            <a (mouseover)="mouseover('skills');" (mouseout)="mouseout('skills');" href="#skills-mobile">{{ 'header.skills' | translate }}
                 <div [ngStyle]="{'opacity': this.skills ? 1 : 0}" class="circleGreen"></div>
             </a>
             <a (mouseover)="mouseover('projects');" (mouseout)="mouseout('projects');" href="#projects">{{ 'header.projects' | translate }}
