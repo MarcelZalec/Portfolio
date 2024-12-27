@@ -106,6 +106,7 @@ export class ContactComponent extends AnimationService {
     } else {
       this.router.navigateByUrl("/privacy");
     }
+    window.scrollTo(0, 0);
   }
 
   setlanguage() {

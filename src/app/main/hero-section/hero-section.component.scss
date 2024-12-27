@@ -4,6 +4,8 @@ $bg-color: linear-gradient(55.22deg, rgba(28 ,28, 28, 1) 36.26%, rgba(8, 70, 59,
 
 .background {
     background: $bg-color;
+    position: relative;
+    overflow: hidden;
 }
 
 section {
@@ -54,17 +56,19 @@ section {
 }
 
 .info-box {
+    font-family: 'Karla';
     z-index: 100;
     background-color: rgba(255,255,255,0.12);
     position: absolute;
     @include dFlex(space-around, $g: 48px);
     height: 62px;
-    bottom: 140px;
+    bottom: 250px;
     left: -40px;
-    margin: 12px 32px 12px 32px;
+    // margin: 12px 32px 12px 32px;
     transform: rotate(-3deg);
     opacity: 0.5;
     backdrop-filter: blur(5.3px);
+    min-width: 101vw;
 }
 
 .info-box-text {
@@ -153,7 +157,7 @@ section {
     from {
         transform: translateX(0vw);
     } to {
-        transform: translateX(calc(-100vw));
+        transform: translateX(calc(-70vw));
     }
 }
 

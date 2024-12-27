@@ -18,9 +18,7 @@ export class HeaderComponent {
   projects:boolean = false;
   dialogOpen:boolean = false;
 
-  constructor(private translate: TranslateService, private router: Router) {
-    // this.checkURL()
-  }
+  constructor(private translate: TranslateService, private router: Router) {}
 
 
   ngOnInit(): void {
@@ -76,31 +74,12 @@ export class HeaderComponent {
     this.dialogOpen = false;
   }
 
-  checkURL() {
-    setInterval(() => {
-      // console.log("Router",this.router.url.match("privacy"));
-      if (this.router.url.match("privacy")) {
-        if (!this.isGerman) {
-          this.router.navigateByUrl("/privacy/en")
-        } else {
-          this.router.navigateByUrl("/privacy")
-        }
-      } else {
-        if (!this.isGerman) {
-          this.router.navigateByUrl("/imprint/en")
-        } else {
-          this.router.navigateByUrl("/imprint")
-        }
-      }
-    },2000)
-  }
-
   checkURL2() {
       if (this.router.url.match("privacy")) {
         if (!this.isGerman) {
-          this.router.navigateByUrl("/privacy/en")
+          this.router.navigateByUrl("/privacy/en");
         } else {
-          this.router.navigateByUrl("/privacy")
+          this.router.navigateByUrl("/privacy");
         }
       } else if(this.router.url.match("imprint")) {
         if (!this.isGerman) {
