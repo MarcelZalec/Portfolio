@@ -94,6 +94,9 @@ section {
             cursor: pointer;
         }
     }
+    a {
+        @include dFlex();
+    }
     .line {
         width: 240px;
     }

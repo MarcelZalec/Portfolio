@@ -1,9 +1,11 @@
 import { NgStyle } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslatePipe } from '@ngx-translate/core';
 import { AnimationService } from '../../services/animation.service';
+import { Router } from '@angular/router';
+import { GetLanguageService } from '../../services/get-language.service';
 
 @Component({
   selector: 'app-contact',
@@ -20,6 +22,7 @@ export class ContactComponent extends AnimationService {
   validate:boolean = false;
   checkValidation: any;
   sendSuccesseful:boolean = false;
+  language: "en" | "de" = "en";
 
   contactData = {
     name: "",
@@ -27,6 +30,14 @@ export class ContactComponent extends AnimationService {
     message: "",
     privacy: false,
   }
+
+  constructor(
+      elRef: ElementRef,
+      private lang: GetLanguageService,
+      private router: Router,
+    ) {
+      super(elRef);
+    }
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.valid  && ngForm.form.valid && ngForm.submitted && this.contactData.privacy) {
@@ -85,5 +96,19 @@ export class ContactComponent extends AnimationService {
         this.validate = false;
       }
     },1900)
+  }
+
+  getHref() {
+    this.lang.checkLanguageInLocalstorge();
+    this.setlanguage();
+    if (this.language === "en") {
+      this.router.navigateByUrl("/privacy/en");
+    } else {
+      this.router.navigateByUrl("/privacy");
+    }
+  }
+
+  setlanguage() {
+    this.language = this.lang.activeLanguage;
   }
 }
