@@ -2,6 +2,7 @@ import { CommonModule, NgClass, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 import {TranslateService, TranslateModule, TranslatePipe, TranslateDirective} from '@ngx-translate/core';
 import { MenuDialogComponent } from './menu-dialog/menu-dialog.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -17,7 +18,9 @@ export class HeaderComponent {
   projects:boolean = false;
   dialogOpen:boolean = false;
 
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService, private router: Router) {
+    // this.checkURL()
+  }
 
 
   ngOnInit(): void {
@@ -71,5 +74,42 @@ export class HeaderComponent {
 
   closeMenu() {
     this.dialogOpen = false;
+  }
+
+  checkURL() {
+    setInterval(() => {
+      // console.log("Router",this.router.url.match("privacy"));
+      if (this.router.url.match("privacy")) {
+        if (!this.isGerman) {
+          this.router.navigateByUrl("/privacy/en")
+        } else {
+          this.router.navigateByUrl("/privacy")
+        }
+      } else {
+        if (!this.isGerman) {
+          this.router.navigateByUrl("/imprint/en")
+        } else {
+          this.router.navigateByUrl("/imprint")
+        }
+      }
+    },2000)
+  }
+
+  checkURL2() {
+      if (this.router.url.match("privacy")) {
+        if (!this.isGerman) {
+          this.router.navigateByUrl("/privacy/en")
+        } else {
+          this.router.navigateByUrl("/privacy")
+        }
+      } else if(this.router.url.match("imprint")) {
+        if (!this.isGerman) {
+          this.router.navigateByUrl("/imprint/en")
+        } else {
+          this.router.navigateByUrl("/imprint")
+        }
+      } else {
+        this.router.navigateByUrl("")
+      }
   }
 }

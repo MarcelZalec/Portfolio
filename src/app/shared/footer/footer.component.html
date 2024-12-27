@@ -1,33 +1,35 @@
-<section>
-    <div class="left10">
-        <div id="logo">
-            <a href="">
-                <svg width="150" height="90" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="100%" height="100%" fill="none"/>
-                    <text x="-16" y="35%" font-size="30" text-anchor="middle" fill="green" dy=".3em" transform="rotate(-90, 10, 25)">MZ</text>
-                    <text x="50%" y="25%" font-size="30" text-anchor="middle" fill="white" dy=".9em">Marcel</text>
-                    <text x="44%" y="75%" font-size="30" text-anchor="middle" fill="white" dy=".15em">Zalec</text>
-                </svg>
+<div class="background">
+    <section>
+        <div class="left10">
+            <div id="logo">
+                <a href="">
+                    <svg width="150" height="90" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="none"/>
+                        <text x="-16" y="35%" font-size="30" text-anchor="middle" fill="green" dy=".3em" transform="rotate(-90, 10, 25)">MZ</text>
+                        <text x="50%" y="25%" font-size="30" text-anchor="middle" fill="white" dy=".9em">Marcel</text>
+                        <text x="44%" y="75%" font-size="30" text-anchor="middle" fill="white" dy=".15em">Zalec</text>
+                    </svg>
+                </a>
+            </div>
+            <p>{{ 'footer.status' | translate }}</p>
+            <p>{{ 'footer.location' | translate }}</p>
+        </div>
+        <div id="c">
+            <span>© {{ 'footer.portfolio' | translate }}</span>
+        </div>
+        <div class="links_social">
+            <a href="https://github.com/MarcelZalec?tab=repositories" target="_blank">
+                <div class="circleGreen"></div>
+                Github
+            </a>
+            <a href="mailto: contact&#64;marcelzalec.at">
+                <div class="circleGreen"></div>
+                Email
+            </a>
+            <a (click)="checkHref()" target="_blank">
+                <div class="circleGreen"></div>
+                {{ 'footer.imprint' | translate }}
             </a>
         </div>
-        <p>{{ 'footer.status' | translate }}</p>
-        <p>{{ 'footer.location' | translate }}</p>
-    </div>
-    <div id="c">
-        <span>© {{ 'footer.portfolio' | translate }}</span>
-    </div>
-    <div class="links_social">
-        <a href="https://github.com/MarcelZalec?tab=repositories" target="_blank">
-            <div class="circleGreen"></div>
-            Github
-        </a>
-        <a href="mailto: contact&#64;marcelzalec.at">
-            <div class="circleGreen"></div>
-            Email
-        </a>
-        <a (click)="checkHref()" target="_blank">
-            <div class="circleGreen"></div>
-            {{ 'footer.imprint' | translate }}
-        </a>
-    </div>
-</section>
+    </section>
+</div>

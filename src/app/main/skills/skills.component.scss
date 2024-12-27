@@ -8,10 +8,14 @@
     }
 }
 
+.background {
+    background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, rgba(8, 70, 59, 1.5) 0%, #1C1C1C 100%)
+}
+
 section {
     @include dFlex(space-around);
     flex-direction: row;
-    background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, rgba(8, 70, 59, 1.5) 0%, #1C1C1C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    background: unset /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     span {
         color: $normalWhite;
     }

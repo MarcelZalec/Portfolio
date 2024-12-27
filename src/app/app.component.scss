@@ -9,6 +9,10 @@ $mintGreen: rgba(61, 207, 182, 1);
     gap: $g;
 }
 
+@mixin hostBackground($col: #1C1C1C) {
+    background-color: $col;
+}
+
 // $backgroundStandart: rgb(23, 23, 23);
 $normalWhite: rgb(255, 255, 255, 1) !important;
 
@@ -21,6 +25,13 @@ $normalWhite: rgb(255, 255, 255, 1) !important;
     }
 }
 
+.background {
+    @include dFlex();
+    @include hostBackground();
+    flex-direction: column;
+    width: 100vw;
+}
+
 section {
     @include dFlex();
     max-width: 1920px;
@@ -31,7 +42,6 @@ section {
     background: unset;
     @include dFlex();
     gap: 70px;
-    
 }
 
 .button {

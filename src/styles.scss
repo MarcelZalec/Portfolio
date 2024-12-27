@@ -37,18 +37,13 @@ $mintGreen: rgba(61, 207, 182, 1);
     width: 100vw;
     height: 100vh;
   }
+  svg>path:hover {
+    cursor: pointer;
+  }
 }
 
 .d-none {
   display: none !important;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  background-color: black;
 }
 
 .noScroll {

@@ -1,9 +1,15 @@
 @import '../../app.component.scss';
 
+$bg-color: linear-gradient(55.22deg, rgba(28 ,28, 28, 1) 36.26%, rgba(8, 70, 59, 1)) !important;
+
+.background {
+    background: $bg-color;
+}
+
 section {
     position: relative;
     font-family: 'Karla';
-    background: linear-gradient(55.22deg, rgba(28 ,28, 28, 1) 36.26%, rgba(8, 70, 59, 1));
+    background: unset;
     width: 100%;
     height: calc(100vh - 96px);
     @include dFlex();
