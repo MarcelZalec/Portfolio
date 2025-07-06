@@ -56,10 +56,10 @@ export class ProjectsService {
       ],
     },
     {
-      name: 'projects.sharky.name',
-      tag: 'sharky',
+      name: 'projects.poloLoco.name',
+      tag: 'poloLoco',
       image: 'assets/img/poloLoco.png',
-      description: 'projects.sharky.description',
+      description: 'projects.poloLoco.description',
       urls: {
         project: 'https://elpololoco.marcelzalec.at/',
         github: 'https://github.com/MarcelZalec/El_Polo_Loco.git',

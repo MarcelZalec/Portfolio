@@ -38,9 +38,13 @@
         </div>
     </section>
     <div class="info-box">
-        <div class="info-box-text" *ngFor="let item of 'hero.slider' | translate">
-            <span >{{ item.slide }}</span>
-            <div class="circleGreen"></div>
+        <div class="info-box-text">
+            <ng-container *ngFor="let rep of repeatArray">
+                <ng-container *ngFor="let item of 'hero.slider' | translate">
+                    <span >{{ item.slide }}</span>
+                    <div class="circleGreen"></div>
+                </ng-container>
+            </ng-container>
         </div>
     </div>
 </div>

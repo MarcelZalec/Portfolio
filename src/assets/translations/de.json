@@ -5,38 +5,14 @@
         "projects": "Projekte"
     },
     "hero": {
-        "headline": "Fullstack Entwickler",
+        "headline": "Fullstack-Entwickler",
         "work": "Projekte ansehen",
         "contact": "Kontakt aufnehmen",
         "slider": [
-            { "slide": "Verfügbar für Projekte" },
-            { "slide": "Aus Österreich" },
-            { "slide": "Fullstack Entwickler" },
-            { "slide": "Verfügbar für fern Arbeit" },
-            { "slide": "Verfügbar für Projekte" },
-            { "slide": "Aus Österreich" },
-            { "slide": "Fullstack Entwickler" },
-            { "slide": "Verfügbar für fern Arbeit" },
-            { "slide": "Verfügbar für Projekte" },
-            { "slide": "Aus Österreich" },
-            { "slide": "Fullstack Entwickler" },
-            { "slide": "Verfügbar für fern Arbeit" },
-            { "slide": "Verfügbar für Projekte" },
-            { "slide": "Aus Österreich" },
-            { "slide": "Fullstack Entwickler" },
-            { "slide": "Verfügbar für fern Arbeit" },
-            { "slide": "Verfügbar für Projekte" },
-            { "slide": "Aus Österreich" },
-            { "slide": "Fullstack Entwickler" },
-            { "slide": "Verfügbar für fern Arbeit" },
-            { "slide": "Verfügbar für Projekte" },
-            { "slide": "Aus Österreich" },
-            { "slide": "Fullstack Entwickler" },
-            { "slide": "Verfügbar für fern Arbeit" },
-            { "slide": "Verfügbar für Projekte" },
-            { "slide": "Aus Österreich" },
-            { "slide": "Fullstack Entwickler" },
-            { "slide": "Verfügbar für fern Arbeit" }
+          { "slide": "Verfügbar für Projekte" },
+          { "slide": "Aus Österreich" },
+          { "slide": "Fullstack-Entwickler" },
+          { "slide": "Verfügbar für fern Arbeit" }
         ]
     },
     "about": {
@@ -52,7 +28,7 @@
     "skills": {
         "eyebrow": "Technologien",
         "headline": "Skills",
-        "description": "Meine berufliche Reise umfasst die Arbeit an diversen Projekten, bei denen ich eine Vielzahl von Frontend-Technologien und Konzepten eingesetzt habe. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Welt der Webentwicklung stets einen Schritt voraus zu sein.",
+        "description": "Meine berufliche Reise umfasst die Arbeit an diversen Projekten, bei denen ich eine Vielzahl von Frontend und Backend-Technologien und Konzepten eingesetzt habe. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Welt der Webentwicklung stets einen Schritt voraus zu sein.",
         "headline2": {
           "part1": "Sie benötigen",
           "part2": "weitere Fähigkeiten?"
@@ -72,7 +48,7 @@
           "name": "Join",
           "description": "Task-Manager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu."
         },
-        "sharky": {
+        "poloLoco": {
           "name": "EL Polo Loco",
           "description": "EL Polo Loco ist ein lauf und hupf Spiel"
         },

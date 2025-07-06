@@ -62,21 +62,24 @@ section {
     position: absolute;
     @include dFlex(space-around, $g: 48px);
     height: 62px;
-    bottom: 300px;
-    left: -40px;
-    // margin: 12px 32px 12px 32px;
+    bottom: 90px;
+    // left: -40px;
     transform: rotate(-3deg);
     opacity: 0.5;
     backdrop-filter: blur(5.3px);
-    min-width: 101vw;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .info-box-text {
     position: relative;
     background-color: unset;
-    @include dFlex(space-around);
-    animation: slider-animation 30s ease-out;
-    animation-iteration-count: infinite;
+    display: inline-flex;
+    align-items: center;
+    gap: 48px;
+    white-space: nowrap;
+    animation: slider-animation 10s linear infinite;
+    animation-timing-function: linear;
     span {
         @include dFlex($g: 48px);
         width: max-content;
@@ -85,7 +88,8 @@ section {
         line-height: 38.4px;
     }
     .circleGreen {
-        margin-left: 46px;
+        width: 8px;
+        height: 8px;
     }
 }
 
@@ -136,6 +140,7 @@ section {
         text-decoration: none;
         &:hover {
             color: $mintGreen;
+            cursor: pointer;
         }
     }
 

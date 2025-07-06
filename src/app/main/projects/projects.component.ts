@@ -1,7 +1,6 @@
-import { CommonModule, NgStyle } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, ElementRef } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
-import { DialogComponent } from './dialog/dialog.component';
 import { ProjectsService, Project } from '../../services/project-data.service';
 import { AnimationService } from '../../services/animation.service';
 import { DialogDataService } from '../../services/dialog-data.service';
@@ -9,7 +8,7 @@ import { DialogDataService } from '../../services/dialog-data.service';
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [NgStyle, CommonModule, TranslatePipe, DialogComponent],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })

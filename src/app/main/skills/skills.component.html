@@ -16,55 +16,91 @@
                 </div>
             </div>
         </div>
-        <div class="skill-symbols slideInAnimation-right animElement">
-            <div>
-                <img src="assets/img/svgs/html.svg" alt="">
-                <span>HTML</span>
+        <div class="skill_wrapper">
+            <div class="toogle_skills">
+                <button class="button" id="btn_frontend" [ngClass]="{active: activeSkills === 'frontend'}" (click)="activeSkills = 'frontend'">Frontend</button>
+                <button class="button" id="btn_backend" [ngClass]="{active: activeSkills === 'backend'}" (click)="activeSkills = 'backend'">Backend</button>
             </div>
-            <div>
-                <img src="assets/img/svgs/css.svg" alt="">
-                <span>CSS</span>
+            <div class="skill-symbols slideInAnimation-right animElement">
+                @if(activeSkills === 'frontend'){
+                    <div>
+                        <img src="assets/img/svgs/html.svg" alt="">
+                        <span>HTML</span>
+                    </div>
+                    <div>
+                        <img src="assets/img/svgs/css.svg" alt="">
+                        <span>CSS</span>
+                    </div>
+                    <div>
+                        <img src="assets/img/svgs/javascript.svg" alt="">
+                        <span>JavaScript</span>
+                    </div>
+                    <div>
+                        <img src="assets/img/svgs/materialDesign.svg" alt="">
+                        <span>Material Design</span>
+                    </div>
+                    <div>
+                        <img src="assets/img/svgs/typeScript.svg" alt="">
+                        <span>TypeScript</span>
+                    </div>
+                    <div>
+                        <img src="assets/img/svgs/angular.svg" alt="">
+                        <span>Angular</span>
+                    </div>
+                    <div>
+                        <img src="assets/img/svgs/firebase.svg" alt="">
+                        <span>Firebase</span>
+                    </div>
+                    <div>
+                        <img src="assets/img/svgs/git.svg" alt="">
+                        <span>GIT</span>
+                    </div>
+                    <div>
+                        <img src="assets/img/svgs/Api.svg" alt="">
+                        <span>Rest-Api</span>
+                    </div>
+                    <div>
+                        <img src="assets/img/svgs/scrum.svg" alt="">
+                        <span>Scrum</span>
+                    </div>
+                    <div id="mindset">
+                        <div>
+                            <img src="assets/img/svgs/growthmindset.svg" alt="">
+                            <span>Growth mindest</span>
+                        </div>
+                        <app-overlay class="popUpCont"></app-overlay>
+                    </div>
+                }@else {
+                    <div>
+                        <img src="assets/img/svgs/skills_backend/Python.svg" alt="">
+                        <span>Python</span>
+                    </div>
+                    <div>
+                        <img src="assets/img/svgs/skills_backend/Django.svg" alt="">
+                        <span>Django</span>
+                    </div>
+                    <div>
+                        <img src="assets/img/svgs/skills_backend/Linux.svg" alt="">
+                        <span>Linux</span>
+                    </div>
+                    <div>
+                        <img src="assets/img/svgs/skills_backend/Docker.svg" alt="">
+                        <span>Docker</span>
+                    </div>
+                    <div>
+                        <img src="assets/img/svgs/skills_backend/PostgreSQL.svg" alt="">
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div>
+                        <img src="assets/img/svgs/skills_backend/SQL.svg" alt="">
+                        <span>SQL</span>
+                    </div>
+                    <div>
+                        <img src="assets/img/svgs/skills_backend/Redis.svg" alt="">
+                        <span>Redis</span>
+                    </div>
+                }
             </div>
-            <div>
-                <img src="assets/img/svgs/javascript.svg" alt="">
-                <span>JavaScript</span>
-            </div>
-            <div>
-                <img src="assets/img/svgs/materialDesign.svg" alt="">
-                <span>Material Design</span>
-            </div>
-            <div>
-                <img src="assets/img/svgs/typeScript.svg" alt="">
-                <span>TypeScript</span>
-            </div>
-            <div>
-                <img src="assets/img/svgs/angular.svg" alt="">
-                <span>Angular</span>
-            </div>
-            <div>
-                <img src="assets/img/svgs/firebase.svg" alt="">
-                <span>Firebase</span>
-            </div>
-            <div>
-                <img src="assets/img/svgs/git.svg" alt="">
-                <span>GIT</span>
-            </div>
-            <div>
-                <img src="assets/img/svgs/Api.svg" alt="">
-                <span>Rest-Api</span>
-            </div>
-            <div>
-                <img src="assets/img/svgs/scrum.svg" alt="">
-                <span>Scrum</span>
-            </div>
-            <div id="mindset">
-                <div>
-                    <img src="assets/img/svgs/growthmindset.svg" alt="">
-                    <span>Growth mindest</span>
-                </div>
-                <app-overlay class="popUpCont"></app-overlay>
-            </div>
-            
         </div>
     </section>
     

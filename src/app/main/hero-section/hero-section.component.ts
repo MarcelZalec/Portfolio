@@ -30,6 +30,7 @@ export class HeroSectionComponent {
   github:boolean = false;
   linkedin:boolean = false;
   dialogOpen: boolean = false;
+  repeatArray = Array(4)
 
   public dialogService = inject(DialogDataService);
 

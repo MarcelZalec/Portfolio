@@ -12,30 +12,6 @@
           { "slide": "Available for Projects" },
           { "slide": "Based in Austria" },
           { "slide": "Fullstack Developer" },
-          { "slide": "Avaialable for remote work" },
-          { "slide": "Available for Projects" },
-          { "slide": "Based in Austria" },
-          { "slide": "Fullstack Developer" },
-          { "slide": "Avaialable for remote work" },
-          { "slide": "Available for Projects" },
-          { "slide": "Based in Austria" },
-          { "slide": "Fullstack Developer" },
-          { "slide": "Avaialable for remote work" },
-          { "slide": "Available for Projects" },
-          { "slide": "Based in Austria" },
-          { "slide": "Fullstack Developer" },
-          { "slide": "Avaialable for remote work" },
-          { "slide": "Available for Projects" },
-          { "slide": "Based in Austria" },
-          { "slide": "Fullstack Developer" },
-          { "slide": "Avaialable for remote work" },
-          { "slide": "Available for Projects" },
-          { "slide": "Based in Austria" },
-          { "slide": "Fullstack Developer" },
-          { "slide": "Avaialable for remote work" },
-          { "slide": "Available for Projects" },
-          { "slide": "Based in Austria" },
-          { "slide": "Fullstack Developer" },
           { "slide": "Avaialable for remote work" }
         ]
     },
@@ -52,7 +28,7 @@
     "skills": {
         "eyebrow": "Technologies",
         "headline": "Skills",
-        "description": "My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to Continously enhance my skills and stay ahead in the ever-evolving landscape of web development.",
+        "description": "My journey has involved working on diverse projects, employing a range of frontend and backend technologies and concepts. I am open to embracing new technologies and methodologies to Continously enhance my skills and stay ahead in the ever-evolving landscape of web development.",
         "headline2": {
           "part1": "You need",
           "part2": "another skill?"
@@ -72,7 +48,7 @@
           "name": "Join",
           "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
         },
-        "sharky": {
+        "poloLoco": {
           "name": "El Polo Loco",
           "description": "El Polo Loco is a jump and run game"
         },
@@ -105,7 +81,7 @@
         "headline": "Let's work together",
         "solve": "Got a problem to solve?",
         "paragraph": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
-        "paragraph2": "Need a Fullstack-Developer?",
+        "paragraph2": "Need a Fullstack Developer?",
         "span": " Let’s talk!",
         "form": {
           "name": {

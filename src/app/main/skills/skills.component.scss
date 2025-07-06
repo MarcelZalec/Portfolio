@@ -3,7 +3,7 @@
 *{
     color: $mintGreen;
     font-family: 'Karla';
-    p,span {
+    p,span,.toogle_skills>button {
         font-size: 18px !important;
     }
 }
@@ -112,6 +112,36 @@ section {
             transform: rotateY(360deg);
         }
     }
+}
+
+.skill_wrapper {
+    min-height: 652px;
+}
+
+.toogle_skills {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 10px;
+    .button.active {
+        border-color: $mintGreen !important;
+    }
+    // button {
+    //     padding: 6px 15px;
+    //     border-radius: 30px;
+    //     outline: none;
+    //     border-style: none;
+    //     background-color: rgba(255, 255, 255, 0.5);
+    //     &:hover {
+    //         background-color: $mintGreen;
+    //         color: white;
+    //         cursor: pointer;
+    //     }
+    //     &.active {
+    //         background-color: $mintGreen;
+    //         color: white;
+    //     }
+    // }
 }
 
 @media (max-width: 1120px) {
