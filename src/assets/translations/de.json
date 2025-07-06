@@ -78,15 +78,15 @@
         },
         "bubble": {
           "name": "DABubble",
-          "description": "DABubble ist ein Chat-Messenger im Stil von Slack. Das Projekt befindet sich derzeit noch in der Entwicklung."
+          "description": "DABubble ist ein Chat-Messenger im Stil von Slack."
         },
         "button": "Nächstes Projekt"
     },
     "testimonials": {
         "headline": "Was meine Kollegen über mich sagen",
         "t1": {
-          "name": "H.Perters",
-          "text": "Peters ist hier",
+          "name": "Simon Kiesner",
+          "text": "Ich hatte die Freude, mit Marcel bei der Erstellung unseres Join-Gruppenprojektes zusammenarbeiten zu können. Hierbei erwies er sich als zuverlässiger Teamplayer, der die Aufgaben, die er übernahm, sehr gewissenhaft umsetzte. Seine geduldige und ruhige Art machte die Zusammenarbeit mit ihm im Team sehr angenehm, und bei auftretenden Herausforderungen war er immer bereit, mitzuhelfen und Extrastunden einzulegen, wenn das Projekt es erforderte. Alles in allem war Marcels Mitarbeit von großem Wert für den Erfolg unseres Projekts, weshalb ich ihn wärmstens empfehlen kann.",
           "status": "Team-Partner"
         },
         "t2": {

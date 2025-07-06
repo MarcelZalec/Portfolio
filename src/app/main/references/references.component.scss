@@ -50,11 +50,12 @@ section {
         @include dFlex(space-between, start);
         width: 86%;
         height: 200px;
-        padding: 48px 40px;
+        padding: 40px 40px 20px 40px;
         font-size: 18px;
         >div {
             @include dFlex();
             width: 100%;
+            min-height: fit-content;
             >div {
                 flex: 1;
             }

@@ -82,11 +82,11 @@ export class ProjectsService {
     {
       name: 'projects.bubble.name',
       tag: 'bubble',
-      image: '',
+      image: 'assets/img/DABubble.jpg',
       description: 'projects.bubble.description',
       urls: {
         project: 'https://dabubble.marcelzalec.at/',
-        github: '',
+        github: 'https://github.com/MarcelZalec/DABubble',
       },
       skillset: [
         {
