@@ -4,6 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 export interface ProjectUrls {
   project: string;
   github: string;
+  backend?: string;
 }
 
 export interface Skillset {
@@ -107,6 +108,83 @@ export class ProjectsService {
         {
           name: 'Firebase',
           image: 'assets/img/svgs/firebase.svg',
+        },
+      ],
+    },
+    {
+      name: 'projects.coderr.name',
+      tag: 'coderr',
+      image: 'assets/img/Coderr.jpg',
+      description: 'projects.coderr.description',
+      urls: {
+        project: 'https://coderr.marcelzalec.at/',
+        github: 'https://github.com/MarcelZalec/coderr-frontend',
+        backend: 'https://github.com/MarcelZalec/coderr-backend-public',
+      },
+      skillset: [
+        {
+          name: 'HTML',
+          image: 'assets/img/svgs/html.svg',
+        },
+        {
+          name: 'CSS',
+          image: 'assets/img/svgs/css.svg',
+        },
+        {
+          name: 'JavaScript',
+          image: 'assets/img/svgs/javascript.svg',
+        },
+        {
+          name: 'Django',
+          image: 'assets/img/svgs/skills_backend/Django.svg',
+        },
+        {
+          name: 'Python',
+          image: 'assets/img/svgs/skills_backend/Python.svg',
+        },
+      ],
+    },
+    {
+      name: 'projects.videoflix.name',
+      tag: 'videoflix',
+      image: 'assets/img/Videoflix.jpg',
+      description: 'projects.videoflix.description',
+      urls: {
+        project: 'https://videoflix.marcelzalec.at/',
+        github: 'https://github.com/MarcelZalec/coderr-frontend',
+        backend: 'https://github.com/MarcelZalec/coderr-backend-public',
+      },
+      skillset: [
+        {
+          name: 'HTML',
+          image: 'assets/img/svgs/html.svg',
+        },
+        {
+          name: 'CSS',
+          image: 'assets/img/svgs/css.svg',
+        },
+        {
+          name: 'TypeScript',
+          image: 'assets/img/svgs/typeScript.svg',
+        },{
+          name: 'Angular',
+          image: 'assets/img/svgs/angular.svg',
+        },
+        {
+          name: 'Django',
+          image: 'assets/img/svgs/skills_backend/Django.svg',
+        },
+        {
+          name: 'Python',
+          image: 'assets/img/svgs/skills_backend/Python.svg',
+        },
+        {
+          name: 'PostgreSQL',
+          image: 'assets/img/svgs/skills_backend/PostgreSQL.svg',
+        },
+        {
+          name: 'Redis',
+          image: 'assets/img/svgs/skills_backend/Redis.svg',
         },
       ],
     },

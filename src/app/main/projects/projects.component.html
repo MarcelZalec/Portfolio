@@ -10,10 +10,8 @@
                 class="projects" 
                 *ngFor="let project of projectDb; let index = index;" 
                 (click)="openDialog(index)" 
-                (mouseover)="hoverImg = project.name"
-                (mouseout)="hoverImg = ''"
                 >
-                <div class="project">
+                <div class="project" (mouseover)="hoverImg = project.name" (mouseout)="hoverImg = ''">
                     <div class="description">
                         <h3 class="fira fs24 fw700 main">{{ project.name | translate }}</h3>
                         <svg class="arrowUp" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,7 +20,10 @@
                     </div>
                 
                     <div class="skills">
-                        <span *ngFor="let skill of project.skillset">{{ skill.name }}</span>
+                        <span *ngFor="let skill of project.skillset.slice(0,5); let i = index">{{ skill.name }}</span>
+                        @if(project.skillset.length > 5) {
+                            <span>+</span>
+                        }
                     </div>
                 </div>
                 <div class="imgCont" *ngIf="hoverImg === project.name">

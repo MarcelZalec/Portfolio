@@ -56,6 +56,14 @@
           "name": "DABubble",
           "description": "DABubble ist ein Chat-Messenger im Stil von Slack."
         },
+        "coderr": {
+          "name": "Coderr",
+          "description": "Coderr ist eine Freelancer-Plattform für Entwickler. Die Frontend-Umsetzung erfolgte mit Vanilla JavaScript vom Team der Developer-Akademie, das Backend basiert auf Django."
+        },
+        "videoflix": {
+          "name": "Videoflix",
+          "description": "Videoflix ist eine Video-Streaming-Plattform ähnlich wie Netflix. Sie ermöglicht es Benutzern, Filme und Serien anzusehen, mit Funktionen wie Benutzerregistrierung und Login."
+        },
         "button": "Nächstes Projekt"
     },
     "testimonials": {
@@ -71,8 +79,8 @@
           "status": "Team-Partner"
         },
         "t3": {
-          "name": "H.Leitner",
-          "text": "Test",
+          "name": "Christoph Völker",
+          "text": "Marcel und ich haben gemeinsam an dem Projekt DA Bubble gearbeitet, einer Chat-Anwendung mit Angular im Frontend und Firebase im Backend. Ironischerweise bestand die einzige Herausforderung in unserer Kommunikation gelegentlich in seinem österreichischen Dialekt, aber dafür hatten wir ja die App. Trotz der kurzen, aber intensiven Projektphase war Marcel ein echter Ruhepol im Team. Er erledigte seine Aufgaben stets zuverlässig und mit großer Gewissenhaftigkeit und war auch dann zur Stelle, wenn es mal brenzlig wurde. Danke, Marcel, für die gute Zusammenarbeit!",
           "status": "Team-Partner"
         }
     },
