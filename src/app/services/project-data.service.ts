@@ -151,8 +151,8 @@ export class ProjectsService {
       description: 'projects.videoflix.description',
       urls: {
         project: 'https://videoflix.marcelzalec.at/',
-        github: 'https://github.com/MarcelZalec/coderr-frontend',
-        backend: 'https://github.com/MarcelZalec/coderr-backend-public',
+        github: 'https://github.com/MarcelZalec/Videoflix_Frontend',
+        backend: 'https://github.com/MarcelZalec/Videoflix_Backend',
       },
       skillset: [
         {
