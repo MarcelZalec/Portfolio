@@ -173,10 +173,9 @@ label {
 
 .button:disabled {
     border-color: red !important;
+    cursor: not-allowed;
     p {
         color: red;
-    }
-    &:hover {
         cursor: not-allowed;
     }
 }

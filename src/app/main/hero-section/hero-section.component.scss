@@ -159,6 +159,18 @@ section {
     padding: 0px 12px;
 }
 
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: #3DCFB6;
+  width: 0%;
+  transition: width 0.1s linear;
+  z-index: 9;
+}
+
+
 @keyframes slider-animation{
     from {
         transform: translateX(0vw);

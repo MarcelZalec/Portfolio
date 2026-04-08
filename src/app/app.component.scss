@@ -64,6 +64,7 @@ section {
             animation: hover-Button-animation 2.35s ease-in-out;
             animation-iteration-count: infinite;
             transform: translateX(-150px);
+            cursor: pointer;
         }
     }
 }

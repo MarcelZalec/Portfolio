@@ -46,7 +46,7 @@ section {
 }
 
 .projects {
-    width: 90%;
+    width: 75%;
     p {
         padding: 0px 12px;
         font-family: 'Fira Code';
@@ -73,7 +73,7 @@ section {
 }
 
 .project {
-    width: 80%;
+    // width: 80%;
     @include dFlex(space-between);
         .description {
            @include dFlex($g: 10px);
